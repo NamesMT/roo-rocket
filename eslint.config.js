@@ -1,21 +1,10 @@
 import antfu from '@antfu/eslint-config'
-import frontendNuxtConfig from 'frontend/.nuxt/eslint.config.mjs'
 
-export default frontendNuxtConfig(await antfu(
+export default await antfu(
   {
     typescript: true,
-    vue: true,
-    unocss: true,
     ignores: [
-      '.sst',
     ],
-  },
-  {
-    files: ['apps/backend/**'],
-    rules: {
-      // Disable automatically transform `type` to `interface`, because Hono require the Bindings to be type.
-      'ts/consistent-type-definitions': 'off',
-    },
   },
   {
     rules: {
@@ -36,4 +25,4 @@ export default frontendNuxtConfig(await antfu(
       'style/no-trailing-spaces': 'off',
     },
   },
-))
+)

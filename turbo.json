@@ -1,16 +1,7 @@
 {
   // ############# KNOWN ENV VARIABLES #############
-  //   // apps/frontend
-  //   "NUXT_PUBLIC_FRONTEND_URL", // For SEO
-  //   "NUXT_PUBLIC_BACKEND_URL", // To connect with backend
-
-  //   // apps/backend
-  //   "FRONTEND_URL", // To allow cors from frontend and redirections
-  //   "KINDE_DOMAIN",
-  //   "KINDE_CLIENT_ID",
-  //   "KINDE_CLIENT_SECRET",
-  //   "KINDE_REDIRECT_URI",
-  //   "KINDE_LOGOUT_REDIRECT_URI"
+  //   ### apps/x
+  //   "A", // For X
   // ],
   // ###############################################
   "$schema": "https://turbo.build/schema.json",
@@ -19,19 +10,12 @@
     "**/.env",
     "**/.env.*"
   ],
-  "globalPassThroughEnv": [
-    "NODE_TLS_REJECT_UNAUTHORIZED", // Needed to dev and build with self-signed certificates
-    "AWS_*", // AWS variables
-    "SST_*" // SST variables
-  ],
   "tasks": {
     "build": {
       "dependsOn": [
         "^build"
       ],
       "outputs": [
-        ".nuxt/**",
-        ".output/**",
         "dist/**"
       ]
     },
