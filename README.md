@@ -38,7 +38,7 @@ For trainers:
 * [ ] Development environment with amazing DX and power.
   * DRY: should have a system that allows general prompts to be defined and used across multiple modes, reducing duplication.
   * Configurable: Allowing for users to choose their own flavors of Rocket,
-* [ ] Trainers branch with specialized codebase for Roo trainers
+* [ ] Trainers branch with clean, specialized codebase for Roo trainers
 * [ ] Simple setup
   * Installing should be a breeze, simply execute a command, and `Roo Rocket` is ready to go, on any platform!
 * [ ] Working base prompts
