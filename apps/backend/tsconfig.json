@@ -1,0 +1,17 @@
+{
+  "extends": "@local/tsconfig/base.json",
+  "compilerOptions": {
+    "composite": true,
+    "paths": {
+      "~/*": [
+        "./src/*"
+      ]
+    },
+    "types": [
+      "vitest",
+      "@ark/schema"
+    ]
+  },
+  "include": ["./src/**/*.ts", "./test/**/*.ts"],
+  "exclude": ["dist", "node_modules"]
+}

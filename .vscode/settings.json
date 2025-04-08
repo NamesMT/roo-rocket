@@ -1,0 +1,57 @@
+{
+  // Disable the default formatter, use eslint instead
+  "prettier.enable": false,
+  "editor.formatOnSave": false,
+
+  // Auto fix
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.organizeImports": "never"
+  },
+
+  // Silent the stylistic rules in you IDE, but still auto fix them
+  // "eslint.rules.customizations": [
+  //   { "rule": "style/*", "severity": "off" },
+  //   { "rule": "format/*", "severity": "off" },
+  //   { "rule": "*-indent", "severity": "off" },
+  //   { "rule": "*-spacing", "severity": "off" },
+  //   { "rule": "*-spaces", "severity": "off" },
+  //   { "rule": "*-order", "severity": "off" },
+  //   { "rule": "*-dangle", "severity": "off" },
+  //   { "rule": "*-newline", "severity": "off" },
+  //   { "rule": "*quotes", "severity": "off" },
+  //   { "rule": "*semi", "severity": "off" }
+  // ],
+
+  // Enable eslint for all supported languages
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "vue",
+    "html",
+    "markdown",
+    "json",
+    "jsonc",
+    "yaml",
+    "toml",
+    "gql",
+    "graphql"
+  ],
+
+  "files.associations": {
+    "turbo.json": "jsonc"
+  },
+
+  // Use workspace version of typescript
+  "typescript.tsdk": "node_modules/typescript/lib",
+
+  "i18n-ally.keystyle": "flat",
+  "i18n-ally.enabledFrameworks": ["vue-sfc", "vue"],
+  "i18n-ally.localesPaths": [
+    "packages/locales/dist"
+  ],
+
+  "errorLens.followCursor": "allLines"
+}

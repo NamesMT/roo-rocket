@@ -1,0 +1,14 @@
+{
+  "name": "@local/common-vue",
+  "type": "module",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "lint": "eslint ."
+  },
+  "devDependencies": {
+    "@local/tsconfig": "workspace:*",
+    "unocss": "^66.0.0",
+    "vue": "^3.5.13"
+  }
+}

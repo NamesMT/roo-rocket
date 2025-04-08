@@ -1,0 +1,9 @@
+{
+  "name": "@local/tsconfig",
+  "type": "module",
+  "version": "0.0.0",
+  "private": true,
+  "devDependencies": {
+    "@vue/tsconfig": "^0.7.0"
+  }
+}
