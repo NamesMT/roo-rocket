@@ -13,7 +13,7 @@
 
 ***Roo Rocket**, the all-in-one equipment that you and Roo wants!"*
 
-It's a one-for-all (meaning, usable in collaborated projects) config setup for that aims to provide the complete (opionated) setup for anyone to start using **`Roo Code`**.
+It's a one-for-all (meaning, usable in collaborated projects) config setup for that aims to provide the complete setup for anyone to start using **`Roo Code`**.
 
 For users:
   + Super easy to install, but super configurable, meaning all of these killer features are your choice:
