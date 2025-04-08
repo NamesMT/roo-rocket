@@ -33,8 +33,9 @@ For trainers:
 ## Objectives / Roadmap
 
 * [x] A pretty, **OPTIMIZED** image!
-* [ ] Finish the initial repo layout
-  * (library for the main dev env, cli app for setup).
+* [ ] Finish the initial repo layout.
+  * [x] Library for the main engine.
+  * [ ] Cli app for user setup.
 * [ ] Development environment with amazing DX and power.
   * DRY: should have a system that allows general prompts to be defined and used across multiple modes, reducing duplication.
   * Configurable: Allowing for users to choose their own flavors of Rocket,

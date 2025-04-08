@@ -19,6 +19,7 @@ build
 out/
 .nuxt/
 .next/
+.roo-rocket/
 
 # misc
 .DS_Store
