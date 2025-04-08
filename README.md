@@ -13,7 +13,8 @@
 
 ***Roo Rocket**, the all-in-one equipment that you and Roo wants!"*
 
-It's a one-for-all (meaning, usable in collaborated projects) config setup for that aims to provide the complete setup for anyone to start using **`Roo Code`**.
+It's a one-for-all config setup for that aims to provide the complete setup for anyone to start using **`Roo Code`**,  
+and an amazing base / toolbox those who want to train (and share) their own Roo!
 
 For users:
   + Super easy to install, but super configurable, meaning all of these killer features are your choice:
@@ -29,12 +30,12 @@ For trainers:
 
 `Roo Code` is shipping some amazing enhancements for customizations, and there's no good hub and base for Roo trainers yet, so, let's build one!
 
-## Objectives
+## Objectives / Roadmap
 
 * [x] A pretty, **OPTIMIZED** image!
 * [ ] Finish the initial repo layout
   * (library for the main dev env, cli app for setup).
-* [ ] Setup development environment with amazing DX and power.
+* [ ] Development environment with amazing DX and power.
   * DRY: should have a system that allows general prompts to be defined and used across multiple modes, reducing duplication.
   * Configurable: Allowing for users to choose their own flavors of Rocket,
 * [ ] Trainers branch with specialized codebase for Roo trainers
@@ -46,6 +47,8 @@ For trainers:
 
 ## The expected user experience
 
+*don't try it doesn't work yet XD*
+
 On any platform: `Mac / Linux / Windows`, run a command:
 ```sh
 npx roo-rocket --trainer="NamesMT"
@@ -54,6 +57,10 @@ npx roo-rocket --trainer="NamesMT"
 
 # Enjoy :)
 ```
+
+## Notes:
+
+`Roo Rocket` is still a work-in-progress, but if you're here looking a something similar right now, try my [`RooFlow generic`](https://github.com/NamesMT/RooFlow-generic) config, it's a fork of [`RooFlow`](https://github.com/GreatScottyMac/RooFlow), enter the links to learn more.
 
 ## License
 
