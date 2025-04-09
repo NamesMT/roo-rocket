@@ -4,15 +4,9 @@
 
 ## Training your Roo
 
-### Explaining the wordings:
-
-* `Training your Roo`: this means that you will carefully craft your `rocket` assembly, which, could contains the instructions for various Roo modes.
-* `Shipping your Roo` / `Rocket launch`: this refers to the process of the user installing your `Roo`, imagine you "ship" / "launch" your `Roo` on a `rocket` to the user.
-  * `Rocket launch customize`: refers to the user's ability to configure the launch paramebers and receive the wanted `Roo` version.
-
 ### Start training
 
-To start training your own `Roo`, `Roo Rocket` requires a directory with the following structure, called a `rocket` assembly:
+To start training your own `Roo`, `Roo Rocket` requires a `rocket assembly`, which is these components:
   * `frame/`: the rocket frame, containing the base files that will be processed and built out, only the listed patterns are allowed:
     * `.roomodes`: the `.roomodes` definition to add custom modes for the user.
     * `.roo/*`: the `.roo` folder, containing files that will populate/override instructions for Roo modes.

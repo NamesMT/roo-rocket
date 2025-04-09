@@ -13,18 +13,18 @@
 
 ***Roo Rocket**, the all-in-one equipment that you and Roo wants!"*
 
-It's a one-for-all config setup for that aims to provide the complete setup for anyone to start using **`Roo Code`**,  
-and an amazing base / toolbox those who want to train (and share) their own Roo!
+It's a set of tools that helps you create or install any complete config pack setup for **`Roo Code`**, including features like:
+  + Optimized Footgun (system prompt overrides)
+  + Memory Banks
+  + Smart / Custom Modes
+  + *And endlessly more!*
 
-For users:
-  + Super easy to install, but super configurable, meaning all of these killer features are your choice:
-    + Optimized Footgun (system prompt overrides)
-    + Memory Banks
-    + Smart Modes
-    + *And more endlessly more!*
+`RR` for users:
+  + `Roo Rocket` for user is an engine, offering a super easy install of any `Roo` (`config pack`), whether its a public one shared by your friend, or your own private Roo.
 
-For trainers:
-  + An elegant DX, fork, train your own version of Roo, create a GitHub release, and everyone can use it via `Roo Rocket` CLI!
+`RR` for creators (trainers):
+  + Fork, train your own version of Roo, create a GitHub release, and everyone can use it via `Roo Rocket` CLI!
+  + Provides an elegant DX process for training, like auto loading a `snapshot` that you could test your prompts on, `context` support that help you reduces duplication work in multiple files.
 
 ## Rationale
 
@@ -32,15 +32,15 @@ For trainers:
 
 ## Objectives / Roadmap
 
-* [x] A pretty, **OPTIMIZED** image!
+* [x] A pretty, *OPTIMIZED* image!
 * [ ] Finish the initial repo layout.
   * [x] Library for the main engine.
   * [ ] Cli app for user setup.
 * [ ] Development environment with amazing DX and power.
-  * DRY: should have a system that allows general prompts to be defined and used across multiple modes, reducing duplication.
-  * Configurable: Allowing for users to choose their own flavors of Rocket,
-* [ ] Trainers branch with clean, specialized codebase for Roo trainers
-* [ ] Simple setup
+  * [x] DRY: `fuel` context system that allows reusable contexts to be defined and used across multiple files, reducing duplication.
+  * Configurable: Allowing for users to choose their own flavors of Rocket.
+* [ ] Trainers branch with clean, specialized codebase for Roo trainers.
+* [ ] Simple setup.
   * Installing should be a breeze, simply execute a command, and `Roo Rocket` is ready to go, on any platform!
 * [ ] Working base prompts
 * [ ] Smart, optimized modes
@@ -50,18 +50,35 @@ For trainers:
 
 *don't try it doesn't work yet XD*
 
-On any platform: `Mac / Linux / Windows`, run a command:
 ```sh
+# On any platform: `Mac / Linux / Windows`, run a command:
 npx roo-rocket --trainer="NamesMT"
 
-# Interactively config your Roo
-
-# Enjoy :)
+# Interactively config your Roo if needed
+# Nothing more, enjoy :)
 ```
 
 ## Notes:
 
-`Roo Rocket` is still a work-in-progress, but if you're here looking a something similar right now, try my [`RooFlow generic`](https://github.com/NamesMT/RooFlow-generic) config, it's a fork of [`RooFlow`](https://github.com/GreatScottyMac/RooFlow), enter the links to learn more.
+### RR Terms Explained:
+
+* `RR`: short for `Roo Rocket`
+
+* `rocket assembly` / `config pack` / `Roo`:
+  * Refers to an object that `RR` can use to build out `Roo Code` configurations files, doing installations or development hot reloads.
+
+* `Training your Roo` / `Crafting rocket assembly` / `Crafting config pack`:
+  * Refers to the act of you creating the required structure for `RR` to work, more details will be available in `trainer` template in the future.
+
+* `Rocket launch`:
+  * Refers to the process of the user installing your `Roo`, imagine you "ship" / "launch" your `Roo` on a rocket to the user.
+
+* `Rocket launch customize`:
+  * Refers to the user's ability to configure the launch parameters and receive the wanted `Roo` version.
+
+### References:
+
+`Roo Rocket` is still a work-in-progress, but if you need something similar right now, try my [`RooFlow generic`](https://github.com/NamesMT/RooFlow-generic) config, it's a fork of [`RooFlow`](https://github.com/GreatScottyMac/RooFlow), enter the links to learn more.
 
 ## License
 
