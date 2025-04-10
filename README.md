@@ -35,10 +35,12 @@ It's a set of tools that helps you create or install any complete config pack se
 * [x] A pretty, *OPTIMIZED* image!
 * [ ] Finish the initial repo layout.
   * [x] Library for the main engine.
+    * [x] Ability to assemble the rocket from `frame` and `fuel`.
+    * [x] Ability to customize the rocket launch using `rocket.config.ts`.
   * [ ] Cli app for user setup.
 * [ ] Development environment with amazing DX and power.
   * [x] DRY: `fuel` context system that allows reusable contexts to be defined and used across multiple files, reducing duplication.
-  * Configurable: Allowing for users to choose their own flavors of Rocket.
+  * [x] Configurable: Allowing for users to choose their own flavors of Rocket.
 * [ ] Trainers branch with clean, specialized codebase for Roo trainers.
 * [ ] Simple setup.
   * Installing should be a breeze, simply execute a command, and `Roo Rocket` is ready to go, on any platform!

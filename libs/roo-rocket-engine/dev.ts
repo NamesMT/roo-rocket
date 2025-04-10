@@ -1,6 +1,6 @@
-import { mkdir, readFile } from 'node:fs/promises'
+import { mkdir } from 'node:fs/promises'
 import { resolve } from 'pathe'
-import { simpleRocketAssemble } from '~/rocket/assemble'
+import { rocketAssemble } from '~/rocket/assemble'
 
 export interface createDevEnvironmentOptions {
   /**
@@ -20,11 +20,9 @@ async function createDevEnvironment(options: createDevEnvironmentOptions = {}) {
 async function entry() {
   await createDevEnvironment()
 
-  await simpleRocketAssemble({
+  await rocketAssemble({
     frameDir: resolve(import.meta.dirname, 'src/roos-zoo/main/frame'),
-    variables: {
-      '{{MEMORY_BANK_LOAD}}': await readFile(resolve(import.meta.dirname, 'src/roos-zoo/main/fuel/instruct_memory-bank-load.md'), { encoding: 'utf8' }),
-    },
+    fuelDir: resolve(import.meta.dirname, 'src/roos-zoo/fuel-garage'),
     outDir: resolve(import.meta.dirname, '.roo-rocket/'),
   })
 }
