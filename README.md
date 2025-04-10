@@ -3,7 +3,7 @@
 # Roo Rocket
 
 <h3>The all-in-one equipment that you and Roo wants!</h3>
-<img src="./branding.png" alt="Roo Rocket's logo" width="320"/>
+<img src="./branding.svg" alt="Roo Rocket's logo" width="320"/>
 <h5>(And an amazing base for Roo trainers)</h5>
 
 <h2>Work-in-progress!</h2>
