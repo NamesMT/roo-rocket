@@ -53,15 +53,13 @@ It's a set of tools that helps you create or install any complete config pack se
 * [ ] A webpage, featuring the community Roo trainers
 * [ ] Splitting the main engine to a general-purpose `config-rocket`
 
-## The expected user experience
-
-*don't try it doesn't work yet XD*
+## Usage (for users)
 
 ```sh
 # On any platform: `Mac / Linux / Windows`, run a command:
 npx roo-rocket --repo="NamesMT/roo-rocket"
 
-# Interactively config your troop if needed
+# Interactively config your troop if config pack have parameters
 # Nothing more, enjoy :)
 ```
 
