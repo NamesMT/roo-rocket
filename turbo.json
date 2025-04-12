@@ -27,7 +27,12 @@
     },
     "deploy": {
       "cache": false,
-      "dependsOn": ["build", "lint", "test"]
-    }
+      "dependsOn": [
+        "build",
+        "lint",
+        "test"
+      ]
+    },
+    "release": {}
   }
 }

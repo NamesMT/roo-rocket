@@ -1,6 +1,7 @@
 {
   "name": "roo-rocket--mono",
   "type": "module",
+  "version": "0.1.0",
   "private": true,
   "packageManager": "pnpm@10.8.0",
   "author": "NamesMT <dangquoctrung123@gmail.com>",
@@ -20,6 +21,7 @@
     "dev": "turbo run dev",
     "test": "turbo run test",
     "lint": "turbo run lint",
+    "release": "turbo run release && pnpm dlx changelogen@latest --release --push",
     "prepare": "simple-git-hooks"
   },
   "dependencies": {},
