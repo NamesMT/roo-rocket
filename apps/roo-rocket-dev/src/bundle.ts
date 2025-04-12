@@ -3,8 +3,8 @@ import { bundleConfigPack } from 'roo-rocket'
 
 async function entry() {
   await bundleConfigPack({
-    frameDir: resolve(import.meta.dirname, 'roos-zoo/main/frame'),
-    fuelDir: resolve(import.meta.dirname, 'roos-zoo/fuel-garage'),
+    frameDir: resolve(import.meta.dirname, 'troops/main/frame'),
+    fuelDir: resolve(import.meta.dirname, 'troops/fuel-garage'),
     outDir: resolve(import.meta.dirname, '../dist'),
   })
 }

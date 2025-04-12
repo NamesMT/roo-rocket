@@ -30,8 +30,8 @@ async function entry() {
   await createDevEnvironment({ clean: true })
 
   await rocketAssemble({
-    frameDir: resolve(import.meta.dirname, 'roos-zoo/main/frame'),
-    fuelDir: resolve(import.meta.dirname, 'roos-zoo/fuel-garage'),
+    frameDir: resolve(import.meta.dirname, 'troops/main/frame'),
+    fuelDir: resolve(import.meta.dirname, 'troops/fuel-garage'),
     outDir: resolve(import.meta.dirname, '../.roo-rocket'),
   })
 }
