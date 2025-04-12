@@ -30,15 +30,15 @@
     "dist"
   ],
   "scripts": {
-    "start": "dotenvx run -f .env.local.ignored -f .env.local -f .env -- tsx",
-    "watch": "dotenvx run -f .env.local.ignored -f .env.local -f .env -- tsx watch",
+    "start": "tsx",
+    "watch": "tsx watch",
     "stub": "unbuild --stub",
     "cli": "pnpm run start src/cli.ts",
     "lint": "eslint .",
     "test": "vitest",
     "test:types": "tsc --noEmit --skipLibCheck",
     "check": "pnpm lint && pnpm test:types && vitest run --coverage",
-    "build": "dotenvx run -f .env.prod.local -f .env -- unbuild",
+    "build": "unbuild",
     "release": "pnpm dlx changelogen@latest --release --push --publish",
     "prepublishOnly": "pnpm run build"
   },

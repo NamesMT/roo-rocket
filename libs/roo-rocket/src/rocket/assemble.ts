@@ -73,7 +73,7 @@ export async function rocketAssemble(options: rocketAssembleOptions) {
     outDir,
   } = options
 
-  const rocketConfigPath = rocketConfig ?? resolve(frameDir, '../rocket.config.ts')
+  const rocketConfigPath = rocketConfig ?? resolve(frameDir, '../rocket.config')
 
   const { resolvedVariables } = await parseRocketConfig(rocketConfigPath)
 

@@ -40,6 +40,13 @@ export interface bundleConfigPackOptions {
    * Output directory.
    */
   outDir: string
+
+  /**
+   * Output file name (excluding extension).
+   * 
+   * @default `rocket-bundle`
+   */
+  outName?: string
 }
 export async function bundleConfigPack(options: bundleConfigPackOptions) {
   const {
@@ -47,6 +54,7 @@ export async function bundleConfigPack(options: bundleConfigPackOptions) {
     rocketConfig,
     fuelDir,
     outDir,
+    outName,
   } = options
 
   const rocketConfigPath = rocketConfig ?? resolve(frameDir, '../rocket.config.ts')
@@ -55,7 +63,7 @@ export async function bundleConfigPack(options: bundleConfigPackOptions) {
 
   const referencedFuels = (await extractReferencedFuels(loadedRocketConfig))
 
-  const outputPath = join(outDir, 'rocket-bundle.zip')
+  const outputPath = join(outDir, `${outName ?? 'rocket-bundle'}.zip`)
 
   await createBundle({
     loadedRocketConfig,
@@ -65,7 +73,7 @@ export async function bundleConfigPack(options: bundleConfigPackOptions) {
     outputPath,
   })
 
-  logger.success(`Rocket bundle created successfully at: ${outputPath}`)
+  logger.success(`Rocket bundled: ${outputPath}`)
 }
 
 interface createBundleOptions {

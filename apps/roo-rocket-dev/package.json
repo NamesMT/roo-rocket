@@ -4,8 +4,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "dotenvx run -f .env.local.ignored -f .env.local -f .env -- tsx",
-    "watch": "dotenvx run -f .env.local.ignored -f .env.local -f .env -- tsx watch",
+    "start": "tsx",
+    "watch": "tsx watch",
     "stub": "unbuild --stub",
     "dev": "pnpm run start src/dev.ts",
     "bundle": "pnpm run start src/bundle.ts",

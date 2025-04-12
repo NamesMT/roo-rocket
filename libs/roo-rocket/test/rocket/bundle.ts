@@ -189,7 +189,7 @@ describe('bundleConfigPack', () => {
     expect(mockFs.writeFile).toHaveBeenCalledWith(outputZipPath, expect.any(Uint8Array)) // Check path and type
 
     // 6. Logging
-    expect(mockLogger.success).toHaveBeenCalledWith(`Rocket bundle created successfully at: ${outputZipPath}`)
+    expect(mockLogger.success).toHaveBeenCalledWith(`Rocket bundled: ${outputZipPath}`)
   })
 
   it('should handle no referenced fuels', async () => {
@@ -237,7 +237,7 @@ describe('bundleConfigPack', () => {
     expect(Object.keys(zipData).some(k => k.startsWith('fuel/'))).toBe(false) // Assert no fuel entries in zip
 
     expect(mockFs.writeFile).toHaveBeenCalledWith(outputZipPath, expect.any(Uint8Array))
-    expect(mockLogger.success).toHaveBeenCalledWith(`Rocket bundle created successfully at: ${outputZipPath}`)
+    expect(mockLogger.success).toHaveBeenCalledWith(`Rocket bundled: ${outputZipPath}`)
   })
 
   it('should use provided rocketConfig path', async () => {
