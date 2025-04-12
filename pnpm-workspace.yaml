@@ -2,6 +2,7 @@ packages:
   - apps/*
   - libs/*
   - locals/*
+
 onlyBuiltDependencies:
   - esbuild
   - simple-git-hooks
