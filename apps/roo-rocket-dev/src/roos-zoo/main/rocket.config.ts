@@ -1,4 +1,4 @@
-import { defineRocketConfig } from '~/rocket/config'
+import { defineRocketConfig } from 'roo-rocket'
 
 export default defineRocketConfig({
   parameters: [{

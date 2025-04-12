@@ -86,7 +86,7 @@ async function createBundle(options: createBundleOptions): Promise<void> {
     zipData['rocket.config.json5'] = strToU8(configStr)
   }
   catch (error) {
-    console.error('Error serializing rocket config:', error)
+    logger.error('Error serializing rocket config:', error)
     throw new Error('Failed to serialize rocket config to JSON5.')
   }
 
@@ -95,7 +95,7 @@ async function createBundle(options: createBundleOptions): Promise<void> {
     await addDirectoryToZip(zipData, frameDir, 'frame', frameDir)
   }
   catch (error) {
-    console.error(`Error adding frame directory (${frameDir}):`, error)
+    logger.error(`Error adding frame directory (${frameDir}):`, error)
     throw new Error('Failed to bundle frame directory.')
   }
 
@@ -116,7 +116,7 @@ async function createBundle(options: createBundleOptions): Promise<void> {
   await new Promise<void>((resolvePromise, rejectPromise) => {
     zip(zipData, async (err, data) => {
       if (err) {
-        console.error(`Error during zip operation for ${outputPath}:`, err)
+        logger.error(`Error during zip operation for ${outputPath}:`, err)
         return rejectPromise(new Error('Failed during zip operation.'))
       }
 
@@ -126,7 +126,7 @@ async function createBundle(options: createBundleOptions): Promise<void> {
       await writeFile(outputPath, data)
         .then(() => resolvePromise())
         .catch((writeErr) => {
-          console.error(`Error writing zip file (${outputPath}):`, writeErr)
+          logger.error(`Error writing zip file (${outputPath}):`, writeErr)
           rejectPromise(new Error('Failed to write zip bundle.'))
         })
     })

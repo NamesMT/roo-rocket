@@ -1,24 +1,22 @@
 {
-  "name": "roo-rocket-engine",
+  "name": "roo-rocket-dev",
   "type": "module",
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "dotenvx run -f .env.local.ignored -f .env.local -f .env -- tsx dev.ts",
-    "watch": "dotenvx run -f .env.local.ignored -f .env.local -f .env -- tsx watch dev.ts",
+    "start": "dotenvx run -f .env.local.ignored -f .env.local -f .env -- tsx",
+    "watch": "dotenvx run -f .env.local.ignored -f .env.local -f .env -- tsx watch",
     "stub": "unbuild --stub",
-    "dev": "pnpm run watch",
+    "dev": "pnpm run start src/dev.ts",
+    "bundle": "pnpm run start src/bundle.ts",
     "lint": "eslint .",
     "test": "vitest",
     "test:types": "tsc --noEmit --skipLibCheck",
-    "check": "pnpm lint && pnpm test:types && vitest run --coverage",
-    "build": "dotenvx run -f .env.prod.local -f .env -- unbuild"
+    "check": "pnpm lint && pnpm test:types && vitest run --coverage"
   },
   "dependencies": {
     "@parcel/watcher": "^2.5.1",
-    "c12": "^3.0.3",
-    "confbox": "^0.2.2",
-    "fflate": "^0.8.2",
+    "consola": "^3.4.2",
     "pathe": "^2.0.3",
     "std-env": "^3.9.0",
     "tinyglobby": "^0.2.12"
@@ -28,7 +26,7 @@
     "@local/tsconfig": "workspace:*",
     "@namesmt/utils": "^0.5.10",
     "@vitest/coverage-v8": "^3.1.1",
-    "consola": "^3.4.2",
+    "roo-rocket": "workspace:*",
     "unbuild": "^3.5.0",
     "vitest": "^3.1.1"
   }

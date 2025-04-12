@@ -1,0 +1,25 @@
+import { defineBuildConfig } from 'unbuild'
+import sharedConfig from './shared.config'
+
+export default defineBuildConfig({
+  entries: [
+    // Main engine
+    'src/index',
+
+    // CLI app
+    {
+      input: 'src/cli',
+      declaration: false,
+    },
+  ],
+  declaration: 'node16',
+  clean: true,
+  rollup: {
+    inlineDependencies: true,
+    esbuild: {
+      target: 'esnext',
+      // minify: true,
+    },
+  },
+  ...sharedConfig,
+})

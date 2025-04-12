@@ -36,17 +36,60 @@ importers:
         specifier: ^5.8.3
         version: 5.8.3
 
-  libs/roo-rocket-engine:
+  apps/roo-rocket-dev:
     dependencies:
       '@parcel/watcher':
         specifier: ^2.5.1
         version: 2.5.1
+      consola:
+        specifier: ^3.4.2
+        version: 3.4.2
+      pathe:
+        specifier: ^2.0.3
+        version: 2.0.3
+      std-env:
+        specifier: ^3.9.0
+        version: 3.9.0
+      tinyglobby:
+        specifier: ^0.2.12
+        version: 0.2.12
+    devDependencies:
+      '@local/common':
+        specifier: workspace:*
+        version: link:../../locals/common
+      '@local/tsconfig':
+        specifier: workspace:*
+        version: link:../../locals/tsconfig
+      '@namesmt/utils':
+        specifier: ^0.5.10
+        version: 0.5.10
+      '@vitest/coverage-v8':
+        specifier: ^3.1.1
+        version: 3.1.1(vitest@3.1.1(@types/debug@4.1.12)(@types/node@22.14.0)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.1))
+      roo-rocket:
+        specifier: workspace:*
+        version: link:../../libs/roo-rocket
+      unbuild:
+        specifier: ^3.5.0
+        version: 3.5.0(sass@1.86.3)(typescript@5.8.3)
+      vitest:
+        specifier: ^3.1.1
+        version: 3.1.1(@types/debug@4.1.12)(@types/node@22.14.0)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.1)
+
+  libs/roo-rocket:
+    dependencies:
       c12:
         specifier: ^3.0.3
         version: 3.0.3(magicast@0.3.5)
+      citty:
+        specifier: ^0.1.6
+        version: 0.1.6
       confbox:
         specifier: ^0.2.2
         version: 0.2.2
+      consola:
+        specifier: ^3.4.2
+        version: 3.4.2
       fflate:
         specifier: ^0.8.2
         version: 0.8.2
@@ -72,9 +115,6 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^3.1.1
         version: 3.1.1(vitest@3.1.1(@types/debug@4.1.12)(@types/node@22.14.0)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.1))
-      consola:
-        specifier: ^3.4.2
-        version: 3.4.2
       unbuild:
         specifier: ^3.5.0
         version: 3.5.0(sass@1.86.3)(typescript@5.8.3)

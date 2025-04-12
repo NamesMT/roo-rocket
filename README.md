@@ -33,16 +33,16 @@ It's a set of tools that helps you create or install any complete config pack se
 ## Objectives / Roadmap
 
 * [x] A pretty, *OPTIMIZED* image!
-* [ ] Finish the initial repo layout.
-  * [x] Library for the main engine.
+* [x] Finish the initial repo layout.
+  * [x] Main engine and CLI.
     * [x] Ability to assemble the rocket from `frame` and `fuel`.
     * [x] Ability to customize the rocket launch using `rocket.config.ts`.
     * [x] Ability to bundle the `config pack` for safe distribution.
-  * [ ] Cli app for user setup.
     * [ ] Ability to download and unpack a `config pack`.
       * [ ] From URL.
       * [ ] Shortcut for GitHub repo with release.
-* [ ] Development environment with amazing DX and power.
+  * [x] Local development app for playground testing.
+* [x] Development environment with amazing DX and power.
   * [x] DRY: `fuel` context system that allows reusable contexts to be defined and used across multiple files, reducing duplication.
   * [x] Configurable: Allowing for users to choose their own flavors of Rocket.
 * [ ] Trainers branch with clean, specialized codebase for Roo trainers.
@@ -51,6 +51,7 @@ It's a set of tools that helps you create or install any complete config pack se
 * [ ] Working base prompts
 * [ ] Smart, optimized modes
 * [ ] A webpage, featuring the community Roo trainers
+* [ ] Splitting the main engine to a general-purpose `config-rocket`
 
 ## The expected user experience
 

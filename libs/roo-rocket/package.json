@@ -1,0 +1,63 @@
+{
+  "name": "roo-rocket",
+  "type": "module",
+  "version": "0.1.0",
+  "description": "**Roo Rocket**, the all-in-one equipment that you and Roo wants!",
+  "author": "NamesMT <dangquoctrung123@gmail.com>",
+  "license": "Apache-2.0",
+  "funding": "https://github.com/sponsors/namesmt",
+  "homepage": "https://github.com/namesmt/roo-rocket#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/namesmt/roo-rocket.git"
+  },
+  "bugs": "https://github.com/namesmt/roo-rocket/issues",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.mts",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "source": "./src/index.ts",
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "bin": {
+    "roo-rocket": "./dist/cli.mjs"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "start": "dotenvx run -f .env.local.ignored -f .env.local -f .env -- tsx",
+    "watch": "dotenvx run -f .env.local.ignored -f .env.local -f .env -- tsx watch",
+    "stub": "unbuild --stub",
+    "cli": "pnpm run start src/cli.ts",
+    "lint": "eslint .",
+    "test": "vitest",
+    "test:types": "tsc --noEmit --skipLibCheck",
+    "check": "pnpm lint && pnpm test:types && vitest run --coverage",
+    "build": "dotenvx run -f .env.prod.local -f .env -- unbuild",
+    "release": "pnpm dlx changelogen@latest --release --push --publish",
+    "prepublishOnly": "pnpm run build"
+  },
+  "dependencies": {
+    "c12": "^3.0.3",
+    "citty": "^0.1.6",
+    "confbox": "^0.2.2",
+    "consola": "^3.4.2",
+    "fflate": "^0.8.2",
+    "pathe": "^2.0.3",
+    "std-env": "^3.9.0",
+    "tinyglobby": "^0.2.12"
+  },
+  "devDependencies": {
+    "@local/common": "workspace:*",
+    "@local/tsconfig": "workspace:*",
+    "@namesmt/utils": "^0.5.10",
+    "@vitest/coverage-v8": "^3.1.1",
+    "unbuild": "^3.5.0",
+    "vitest": "^3.1.1"
+  }
+}

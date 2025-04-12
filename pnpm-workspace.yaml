@@ -1,6 +1,7 @@
 packages:
-  - locals/*
+  - apps/*
   - libs/*
+  - locals/*
 onlyBuiltDependencies:
   - esbuild
   - simple-git-hooks

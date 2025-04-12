@@ -8,7 +8,7 @@ import * as fflate from 'fflate'
 import * as path from 'pathe'
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 import { logger } from '~/helpers/logger'
-import { bundleConfigPack, extractReferencedFuels } from '~/rocket/bundler'
+import { bundleConfigPack, extractReferencedFuels } from '~/rocket/bundle'
 import * as configLoader from '~/rocket/config'
 
 // --- Mocking Dependencies ---
@@ -127,7 +127,7 @@ describe('bundleConfigPack', () => {
           { name: 'nestedframe.txt', isFile: () => true, isDirectory: () => false } as Dirent,
         ]
       }
-      console.warn(`[Test Mock Warning] Unhandled readdir path: ${receivedPath}`)
+      logger.warn(`[Test Mock Warning] Unhandled readdir path: ${receivedPath}`)
       return [] // Default empty
     })
 
@@ -206,7 +206,7 @@ describe('bundleConfigPack', () => {
       if (receivedPath === expectedFrameDir) {
         return [{ name: 'framefile.js', isFile: () => true, isDirectory: () => false } as Dirent]
       }
-      console.warn(`[Test Mock Warning] Unhandled readdir path: ${receivedPath}`)
+      logger.warn(`[Test Mock Warning] Unhandled readdir path: ${receivedPath}`)
       return []
     })
     // Mock readFile for this test (using path normalization)
@@ -254,7 +254,7 @@ describe('bundleConfigPack', () => {
       if (receivedPath === expectedFrameDir) {
         return []
       }
-      console.warn(`[Test Mock Warning] Unhandled readdir path: ${receivedPath}`)
+      logger.warn(`[Test Mock Warning] Unhandled readdir path: ${receivedPath}`)
       return []
     })
     // No readFile mock needed as frameDir is mocked as empty
@@ -283,7 +283,7 @@ describe('bundleConfigPack', () => {
       if (receivedPath === expectedFrameDir) {
         return []
       }
-      console.warn(`[Test Mock Warning] Unhandled readdir path: ${receivedPath}`)
+      logger.warn(`[Test Mock Warning] Unhandled readdir path: ${receivedPath}`)
       return []
     })
     // Mock readFile to fail specifically for the target fuel path (using normalization)
@@ -320,7 +320,7 @@ describe('bundleConfigPack', () => {
       if (receivedPath === expectedFrameDir) {
         return []
       }
-      console.warn(`[Test Mock Warning] Unhandled readdir path: ${receivedPath}`)
+      logger.warn(`[Test Mock Warning] Unhandled readdir path: ${receivedPath}`)
       return []
     })
     // No readFile mock needed as frameDir is empty
@@ -357,7 +357,7 @@ describe('bundleConfigPack', () => {
       }
       // Any other readdir call is unexpected in this test
       // Warn if readdir is called for unexpected paths in this specific test
-      console.warn(`[Test Mock Warning] Unhandled readdir path in 'writing zip file fails' test: ${receivedPath}`)
+      logger.warn(`[Test Mock Warning] Unhandled readdir path in 'writing zip file fails' test: ${receivedPath}`)
       return []
     })
 
