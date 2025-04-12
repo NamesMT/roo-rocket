@@ -31,7 +31,7 @@ async function entry() {
 
   await rocketAssemble({
     frameDir: resolve(import.meta.dirname, 'troops/main/frame'),
-    fuelDir: resolve(import.meta.dirname, 'troops/fuel-garage'),
+    fuelDir: resolve(import.meta.dirname, 'troops/@fuel-garage'),
     outDir: resolve(import.meta.dirname, '../.roo-rocket'),
   })
 }
