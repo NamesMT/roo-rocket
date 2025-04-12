@@ -1,6 +1,7 @@
 import { mkdir } from 'node:fs/promises'
 import { resolve } from 'pathe'
 import { rocketAssemble } from '~/rocket/assemble'
+// import { bundleConfigPack } from '~/rocket/bundler'
 
 export interface createDevEnvironmentOptions {
   /**
@@ -25,5 +26,11 @@ async function entry() {
     fuelDir: resolve(import.meta.dirname, 'src/roos-zoo/fuel-garage'),
     outDir: resolve(import.meta.dirname, '.roo-rocket/'),
   })
+
+  // await bundleConfigPack({
+  //   frameDir: resolve(import.meta.dirname, 'src/roos-zoo/main/frame'),
+  //   fuelDir: resolve(import.meta.dirname, 'src/roos-zoo/fuel-garage'),
+  //   outDir: resolve(import.meta.dirname, '.roo-rocket/'),
+  // })
 }
 await entry()

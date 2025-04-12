@@ -37,7 +37,11 @@ It's a set of tools that helps you create or install any complete config pack se
   * [x] Library for the main engine.
     * [x] Ability to assemble the rocket from `frame` and `fuel`.
     * [x] Ability to customize the rocket launch using `rocket.config.ts`.
+    * [x] Ability to bundle the `config pack` for safe distribution.
   * [ ] Cli app for user setup.
+    * [ ] Ability to download and unpack a `config pack`.
+      * [ ] From URL.
+      * [ ] Shortcut for GitHub repo with release.
 * [ ] Development environment with amazing DX and power.
   * [x] DRY: `fuel` context system that allows reusable contexts to be defined and used across multiple files, reducing duplication.
   * [x] Configurable: Allowing for users to choose their own flavors of Rocket.

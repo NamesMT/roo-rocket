@@ -54,11 +54,12 @@ export interface RocketConfig {
    */
   variablesResolver?: Record<string, string | FuelReference | RocketCondition<string | FuelReference>>
 }
+
 export function defineRocketConfig<RC extends RocketConfig>(config: RC): RC {
   return config
 }
 
-export async function parseRocketConfig(configOrPath: RocketConfig | string) {
+export async function loadRocketConfig(configOrPath: RocketConfig | string) {
   const { config } = typeof configOrPath === 'string'
     ? await loadConfig({
       name: 'rocket',
@@ -68,6 +69,12 @@ export async function parseRocketConfig(configOrPath: RocketConfig | string) {
     : { config: configOrPath }
 
   assertsRocketConfig(config)
+
+  return config
+}
+
+export async function parseRocketConfig(configOrPath: RocketConfig | string) {
+  const config = await loadRocketConfig(configOrPath)
 
   const resolvedParameters: Record<string, string | boolean> = {}
 

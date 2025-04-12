@@ -10,6 +10,7 @@
   "scripts": {
     "build": "dotenvx run -- turbo run build",
     "dev": "dotenvx run -- turbo run dev",
+    "test": "turbo run test",
     "lint": "turbo run lint",
     "prepare": "simple-git-hooks"
   },

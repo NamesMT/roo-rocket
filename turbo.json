@@ -20,13 +20,14 @@
       ]
     },
     "lint": {},
+    "test": {},
     "dev": {
       "cache": false,
       "persistent": true
     },
     "deploy": {
       "cache": false,
-      "dependsOn": ["build", "lint"]
+      "dependsOn": ["build", "lint", "test"]
     }
   }
 }
