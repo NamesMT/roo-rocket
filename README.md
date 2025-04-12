@@ -38,7 +38,7 @@ It's a set of tools that helps you create or install any complete config pack se
     * [x] Ability to assemble the rocket from `frame` and `fuel`.
     * [x] Ability to customize the rocket launch using `rocket.config.ts`.
     * [x] Ability to bundle the `config pack` for safe distribution.
-    * [ ] Ability to download and unpack a `config pack`.
+    * [ ] CLI: Ability to download and unpack a bundled `config pack`.
       * [ ] From URL.
       * [ ] Shortcut for GitHub repo with release.
   * [x] Local development app for playground testing.
