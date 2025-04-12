@@ -53,6 +53,11 @@ export interface RocketConfig {
    * A simple map to resolve the rocket's variables.
    */
   variablesResolver?: Record<string, string | FuelReference | RocketCondition<string | FuelReference>>
+
+  /**
+   * A simple map to resolve the rocket's excludes.
+   */
+  excludesResolver?: Record<string, RocketCondition<true>>
 }
 
 export function defineRocketConfig<RC extends RocketConfig>(config: RC): RC {
@@ -78,19 +83,18 @@ export async function parseRocketConfig(configOrPath: RocketConfig | string) {
 
   const resolvedParameters: Record<string, string | boolean> = {}
 
-  for (const parameter of config.parameters ?? []) {
-    // Assertions are done here, before resolving
-    assertsRocketParameter(parameter)
+  for (const parameter of config.parameters ?? [])
     resolvedParameters[parameter.id] = await resolveParameter(parameter, resolvedParameters)
-  }
 
   const resolvedVariables: Record<string, string> = {}
-  for (const [variableName, resolverValue] of Object.entries(config.variablesResolver ?? {})) {
-    // Pass the resolver value (string or condition) to resolveVariable
+  for (const [variableName, resolverValue] of Object.entries(config.variablesResolver ?? {}))
     resolvedVariables[variableName] = resolveVariable(resolverValue, resolvedParameters)
-  }
 
-  return { config, resolvedParameters, resolvedVariables }
+  const resolvedExcludes: Record<string, boolean> = {}
+  for (const [excludeName, resolverValue] of Object.entries(config.excludesResolver ?? {}))
+    resolvedExcludes[excludeName] = resolveExclude(resolverValue, resolvedParameters)
+
+  return { config, resolvedParameters, resolvedVariables, resolvedExcludes }
 }
 
 /**
@@ -121,6 +125,10 @@ export function assertsRocketConfig(config: UserInputConfig | RocketConfig): ass
   // Validate variablesResolver object
   if (config.variablesResolver)
     assertsRocketVariablesResolver(config.variablesResolver)
+
+  // Validate excludesResolver object
+  if (config.excludesResolver)
+    assertsRocketExcludesResolver(config.excludesResolver)
 }
 
 async function resolveParameterOperationPrompt(resolver: RocketConfigParameterResolverOperationPrompt): Promise<string | boolean> {
@@ -183,10 +191,8 @@ async function resolveParameter(
   }
 }
 
-// --- Variable Resolution Logic ---
-
 /**
- * Resolves a variable based on its condition.
+ * Resolves a `variable` based on its condition.
  * Assumes the condition structure and result type have been pre-validated.
  */
 function resolveVariable(
@@ -194,15 +200,31 @@ function resolveVariable(
   resolvedParameters: Record<string, string | boolean>,
 ): string {
   // If the resolver value is already a string, return it directly
-  if (typeof resolverValue === 'string') {
+  if (typeof resolverValue === 'string')
     return resolverValue
-  }
 
   // If it's a condition object, resolve it
-  // The structure and result type are assumed pre-validated by assertsRocketVariablesResolver
   const conditionMet = resolveParameterOperationCondition(resolverValue, resolvedParameters)
 
   return conditionMet ? resolverValue.result! : ''
+}
+
+/**
+ * Resolves an `exclude` based on its condition.
+ * Assumes the condition structure and result type have been pre-validated.
+ */
+function resolveExclude(
+  resolverValue: boolean | RocketCondition<true>,
+  resolvedParameters: Record<string, string | boolean>,
+): boolean {
+  // If the resolver value is already a boolean, return it directly
+  if (typeof resolverValue === 'boolean')
+    return resolverValue
+
+  // If it's a condition object, resolve it
+  const conditionMet = resolveParameterOperationCondition(resolverValue, resolvedParameters)
+
+  return conditionMet ? resolverValue.result! : false
 }
 
 export function assertsRocketParameter(parameter: RocketConfigParameter): asserts parameter is RocketConfigParameter {
@@ -238,7 +260,7 @@ export function assertsRocketParameterResolver(resolver: RocketConfigParameterRe
   }
 }
 
-export function assertsRocketVariablesResolver(resolver: Record<string, string | RocketCondition<string>>): asserts resolver is Record<string, string | RocketCondition<string>> {
+export function assertsRocketVariablesResolver(resolver: NonNullable<RocketConfig['variablesResolver']>): asserts resolver is NonNullable<RocketConfig['variablesResolver']> {
   for (const [key, value] of Object.entries(resolver)) {
     if (typeof key !== 'string')
       throw new Error(`Invalid variable resolver key`)
@@ -246,11 +268,25 @@ export function assertsRocketVariablesResolver(resolver: Record<string, string |
     // Value must be a string OR a valid RocketCondition object
     if (typeof value !== 'string') {
       assertsRocketCondition(value)
-      // Also ensure the condition's result is specifically a string if it's a condition object
 
+      // Also ensure the condition's result is specifically a string
       if (typeof value.result !== 'string') {
-        throw new TypeError(`Invalid variable resolver for "${key}": If using a condition object, its 'result' property must be of type string, got ${typeof value.result}.`)
+        throw new TypeError(`Invalid variable resolver for "${key}": 'result' must be of type string, got ${typeof value.result}.`)
       }
+    }
+  }
+}
+
+export function assertsRocketExcludesResolver(resolver: NonNullable<RocketConfig['excludesResolver']>): asserts resolver is NonNullable<RocketConfig['excludesResolver']> {
+  for (const [key, value] of Object.entries(resolver)) {
+    if (typeof key !== 'string')
+      throw new Error(`Invalid exclude resolver key`)
+
+    assertsRocketCondition(value)
+
+    // Also ensure the condition's result is specifically `true`
+    if (value.result !== true) {
+      throw new TypeError(`Invalid exclude resolver for "${key}": 'result' must be 'true', got ${value.result}.`)
     }
   }
 }
