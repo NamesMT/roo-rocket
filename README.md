@@ -51,7 +51,8 @@ It's a set of tools that helps you create or install any complete config pack se
 * [ ] Working base prompts
 * [ ] Smart, optimized modes
 * [ ] A webpage, featuring the community Roo trainers
-* [ ] Splitting the main engine to a general-purpose `config-rocket`
+* [x] Splitting the main engine to a general-purpose `config-rocket`
+  * [ ] Migrate to use `config-rocket` instead of code duplication
 
 ## Usage (for users)
 
