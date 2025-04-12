@@ -1,0 +1,52 @@
+# Changelog
+
+
+## v0.2.0
+
+
+### 🚀 Enhancements
+
+- **libs:** Add `roo-rocket-engine` with initial PoC of rocket assembly ([84b9c9c](https://github.com/namesmt/roo-rocket/commit/84b9c9c))
+- Configuration support done ([af2b5c6](https://github.com/namesmt/roo-rocket/commit/af2b5c6))
+- Add vector and more optimized branding image ([88b164f](https://github.com/namesmt/roo-rocket/commit/88b164f))
+- Add `bundler` feature and tests ([c368022](https://github.com/namesmt/roo-rocket/commit/c368022))
+- General fixes and rewords ([847a7b2](https://github.com/namesmt/roo-rocket/commit/847a7b2))
+- MVP unpacking from url ([3211ad6](https://github.com/namesmt/roo-rocket/commit/3211ad6))
+- Support `excludes`, `excludesResolver`, allowed structure ([f129bc2](https://github.com/namesmt/roo-rocket/commit/f129bc2))
+- Support download from GH repo ([a51c0b1](https://github.com/namesmt/roo-rocket/commit/a51c0b1))
+
+### 🩹 Fixes
+
+- Catch invalid config pack, should await write op ([e2eb5ea](https://github.com/namesmt/roo-rocket/commit/e2eb5ea))
+
+### 💅 Refactors
+
+- ⚠️  Heavy restructuring, preparing for package publish ([9b6bf7f](https://github.com/namesmt/roo-rocket/commit/9b6bf7f))
+
+### 📖 Documentation
+
+- **README:** Remove unnecessary word ([6deb7a5](https://github.com/namesmt/roo-rocket/commit/6deb7a5))
+- **README:** Update ([39de49b](https://github.com/namesmt/roo-rocket/commit/39de49b))
+- **README:** Update ([c363291](https://github.com/namesmt/roo-rocket/commit/c363291))
+- **README:** Update ([931023c](https://github.com/namesmt/roo-rocket/commit/931023c))
+- **README:** Minor correction ([246d389](https://github.com/namesmt/roo-rocket/commit/246d389))
+- **README:** Update wordings ([ecef9b2](https://github.com/namesmt/roo-rocket/commit/ecef9b2))
+- **README:** Is now usable ([c083245](https://github.com/namesmt/roo-rocket/commit/c083245))
+
+### 🏡 Chore
+
+- Init ([5bbce0d](https://github.com/namesmt/roo-rocket/commit/5bbce0d))
+- Clean most items from repo, lets start blank this time ([6c51874](https://github.com/namesmt/roo-rocket/commit/6c51874))
+- Display svg version in README ([eda6741](https://github.com/namesmt/roo-rocket/commit/eda6741))
+- Update package.json ([93d3826](https://github.com/namesmt/roo-rocket/commit/93d3826))
+- Adjust `release` script ([a8ccd8e](https://github.com/namesmt/roo-rocket/commit/a8ccd8e))
+
+#### ⚠️ Breaking Changes
+
+- ⚠️  Heavy restructuring, preparing for package publish ([9b6bf7f](https://github.com/namesmt/roo-rocket/commit/9b6bf7f))
+
+### ❤️ Contributors
+
+- NamesMT ([@NamesMT](https://github.com/NamesMT))
+- Trung Dang ([@NamesMT](https://github.com/NamesMT))
+
