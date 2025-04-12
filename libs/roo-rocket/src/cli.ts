@@ -18,13 +18,16 @@ async function unpackFromUrl(url: string) {
 
   logger.start('Extracting config pack to `.tmp`...')
   await new Promise<void>((resolvePromise, rejectPromise) => {
-    unzip(configPackBuffer, (err, unzipped) => {
+    unzip(configPackBuffer, async (err, unzipped) => {
       if (err) {
         return rejectPromise(new Error('Failed to extract the config pack.'))
       }
 
+      if (!unzipped['rocket.config.json5'])
+        return rejectPromise(new Error('Invalid config pack: "rocket.config.json5" not found.'))
+
       for (const [key, value] of Object.entries(unzipped))
-        simpleWriteFileWithDirs(join('.tmp', key), strFromU8(value))
+        await simpleWriteFileWithDirs(join('.tmp', key), strFromU8(value))
 
       resolvePromise()
     })
