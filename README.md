@@ -40,7 +40,7 @@ It's a set of tools that helps you create or install any complete config pack se
     * [x] Ability to bundle the `config pack` for safe distribution.
     * [x] CLI: Ability to download and unpack a bundled `config pack`.
       * [x] From URL.
-      * [ ] Shortcut for GitHub repo with release.
+      * [x] Shortcut for GitHub repo with release.
   * [x] Local development app for playground testing.
 * [x] Development environment with amazing DX and power.
   * [x] DRY: `fuel` context system that allows reusable contexts to be defined and used across multiple files, reducing duplication.

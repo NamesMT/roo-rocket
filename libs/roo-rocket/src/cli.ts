@@ -1,6 +1,7 @@
 import { rm } from 'node:fs/promises'
 import simpleWriteFileWithDirs from '@local/common/src/utils/fs/simpleWriteFileWithDirs'
 import { defineCommand, runMain } from 'citty'
+import consola from 'consola'
 import { strFromU8, unzip } from 'fflate'
 import { join } from 'pathe'
 import { logger } from '~/helpers/logger'
@@ -45,6 +46,23 @@ async function unpackFromUrl(url: string) {
   logger.success('All done, enjoy your new config!')
 }
 
+async function getRepoReleaseAssets(owner: string, name: string) {
+  const response = await fetch(`https://api.github.com/repos/${owner}/${name}/releases/latest`)
+
+  if (!response.ok)
+    throw new Error(`Failed to fetch repo's release metadata: ${response.statusText}`)
+
+  const release: any = (await response.json())
+
+  const assets = ((release.assets ?? []) as any[]).filter(a => a.content_type === 'application/zip').map(a => ({
+    name: a.name.replace(/\.zip$/, '') as string,
+    browser_download_url: a.browser_download_url as string,
+    download_count: a.download_count as number,
+  }))
+
+  return assets
+}
+
 const main = defineCommand({
   meta: {
     name: 'roo-rocket',
@@ -68,6 +86,30 @@ const main = defineCommand({
 
     if (url)
       return await unpackFromUrl(url)
+
+    const repoPatternMatch = repo.match(/^([\w-]+)\/([\w-]+)$/)
+    if (!repoPatternMatch)
+      throw new Error('Invalid repo format, expected "owner/repo-name"')
+
+    const [, owner, name] = repoPatternMatch
+
+    const availableAssets = await getRepoReleaseAssets(owner, name)
+
+    if (!availableAssets.length)
+      throw new Error(`No assets found for "${owner}/${name}"'s latest release`)
+
+    const selectedAssetIndex = Number(await consola.prompt(`Found ${availableAssets.length} available zip archives for "${owner}/${name}", select one:`, {
+      cancel: 'reject',
+      type: 'select',
+      options: availableAssets.map((asset, index) => ({
+        label: `${asset.name} (${asset.download_count} downloads)`,
+        value: String(index),
+      })),
+    }))
+
+    const selectedAsset = availableAssets[selectedAssetIndex]
+
+    return await unpackFromUrl(selectedAsset.browser_download_url)
   },
 })
 
