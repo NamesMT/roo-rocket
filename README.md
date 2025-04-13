@@ -34,30 +34,6 @@ In simple words, **`Roo Rocket`** help you easily install `Roo Code` configurati
 
 `Roo Code` is shipping some amazing enhancements for customizations, and there's no centralized community and toolkit yet, so, let's build one!
 
-## Objectives / Roadmap
-
-* [x] A pretty, *OPTIMIZED* image!
-* [x] Finish the initial repo layout.
-  * [x] Main engine and CLI.
-    * [x] Ability to assemble the rocket from `frame` and `fuel`.
-    * [x] Ability to customize the rocket launch using `rocket.config.ts`.
-    * [x] Ability to bundle the `config pack` for safe distribution.
-    * [x] CLI: Ability to download and unpack a bundled `config pack`.
-      * [x] From URL.
-      * [x] Shortcut for GitHub repo with release.
-  * [x] Local development app for playground testing.
-* [x] Development environment with amazing DX and power.
-  * [x] DRY: `fuel` context system that allows reusable contexts to be defined and used across multiple files, reducing duplication.
-  * [x] Configurable: Allowing for users to choose their own flavors of Rocket.
-* [ ] Creator template for `troop` trainers.
-* [x] Simple setup.
-  * Installing should be a breeze, simply execute a command, on any platform!
-* [ ] Working base prompts
-* [ ] Smart, optimized modes
-* [ ] A webpage, featuring the community Roo trainers
-* [x] Splitting the main engine to a general-purpose `config-rocket`
-  * [ ] Migrate to use `config-rocket` instead of code duplication
-
 ## Usage (for users)
 
 ```sh
@@ -67,6 +43,12 @@ npx roo-rocket --repo="NamesMT/roo-rocket"
 # Interactively config your troop if config pack have parameters
 # Nothing more, enjoy :)
 ```
+
+## Usage (for trainers)
+
+* Generate a repo from [`config-packs-template`](https://github.com/NamesMT/config-packs-template), it's a template for creating your own `config packs` for `config-rocket` ecosystem.
+* Check `roo-rocket` rules here: [libs/roo-rocket](./libs/roo-rocket/README.md)
+* Start shipping!
 
 ## Notes:
 
@@ -86,9 +68,34 @@ npx roo-rocket --repo="NamesMT/roo-rocket"
 * `Rocket launch customize`:
   * Refers to the user's ability to configure the launch parameters and receive the wanted `troop`, i.e: with/without memory banks instructions, etc.
 
+## Objectives / Roadmap
+
+* [x] A pretty, *OPTIMIZED* image!
+* [x] Finish the initial repo layout.
+  * [x] Main engine and CLI.
+    * [x] Ability to assemble the rocket from `frame` and `fuel`.
+    * [x] Ability to customize the rocket launch using `rocket.config.ts`.
+    * [x] Ability to bundle the `config pack` for safe distribution.
+    * [x] CLI: Ability to download and unpack a bundled `config pack`.
+      * [x] From URL.
+      * [x] Shortcut for GitHub repo with release.
+  * [x] Local development app for playground testing.
+* [x] Development environment with amazing DX and power.
+  * [x] DRY: `fuel` context system that allows reusable contexts to be defined and used across multiple files, reducing duplication.
+  * [x] Configurable: Allowing for users to choose their own flavors of Rocket.
+* [x] Creator template for `troop` trainers.
+  * Public template available: [config-packs-template](https://github.com/NamesMT/config-packs-template)
+* [x] Simple setup.
+  * Installing should be a breeze, simply execute a command, on any platform!
+* [ ] Working base prompts
+* [ ] Smart, optimized modes
+* [ ] A webpage, featuring the community Roo trainers
+* [x] Splitting the main engine to a general-purpose `config-rocket`
+  * [x] Migrate to use `config-rocket` instead of code duplication
+
 ### References:
 
-`Roo Rocket` is still a work-in-progress, but if you need something similar right now, try my [`RooFlow generic`](https://github.com/NamesMT/RooFlow-generic) config, it's a fork of [`RooFlow`](https://github.com/GreatScottyMac/RooFlow), enter the links to learn more.
+`Roo Rocket` is still a work-in-progress, there isn't any feature-complete config packs yet, if you need something similar right now, try my [`RooFlow generic`](https://github.com/NamesMT/RooFlow-generic) config, it's a fork of [`RooFlow`](https://github.com/GreatScottyMac/RooFlow), enter the links to learn more.
 
 ## License
 
