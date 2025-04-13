@@ -1,7 +1,7 @@
 {
   "name": "roo-rocket",
   "type": "module",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "**Roo Rocket**, the all-in-one equipment that you and Roo wants!",
   "author": "NamesMT <dangquoctrung123@gmail.com>",
   "license": "Apache-2.0",
@@ -39,7 +39,7 @@
     "test:types": "tsc --noEmit --skipLibCheck",
     "check": "pnpm lint && pnpm test:types && vitest run --coverage",
     "build": "unbuild",
-    "release": "pnpm dlx changelogen@latest --bump --publish",
+    "release": "pnpm dlx changelogen@latest --release --no-tag --publish",
     "prepublishOnly": "pnpm run build"
   },
   "dependencies": {

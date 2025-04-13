@@ -1,6 +1,35 @@
 # Changelog
 
 
+## v0.3.0
+
+[compare changes](https://github.com/namesmt/roo-rocket/compare/v0.2.0...v0.3.0)
+
+### 📖 Documentation
+
+- **README:** Minor adjust ([40c0deb](https://github.com/namesmt/roo-rocket/commit/40c0deb))
+- **README:** Update ([a155dc1](https://github.com/namesmt/roo-rocket/commit/a155dc1))
+
+### 🏡 Chore
+
+- Commit changelog for `libs/roo-rocket` ([c697d5b](https://github.com/namesmt/roo-rocket/commit/c697d5b))
+- Add `.roomodes` for `main` dev zoo ([72a8b83](https://github.com/namesmt/roo-rocket/commit/72a8b83))
+- Reword `roos-zoo` => `troops` ([228e6b6](https://github.com/namesmt/roo-rocket/commit/228e6b6))
+- Reword `fuel-garage` => `@fuel-garage` ([12a5a8e](https://github.com/namesmt/roo-rocket/commit/12a5a8e))
+- ⚠️  Cleaning and migrating to `config-rocket` as base ([5f6f87a](https://github.com/namesmt/roo-rocket/commit/5f6f87a))
+
+### 🎨 Styles
+
+- Minor linebreak ([4225716](https://github.com/namesmt/roo-rocket/commit/4225716))
+
+#### ⚠️ Breaking Changes
+
+- ⚠️  Cleaning and migrating to `config-rocket` as base ([5f6f87a](https://github.com/namesmt/roo-rocket/commit/5f6f87a))
+
+### ❤️ Contributors
+
+- NamesMT ([@NamesMT](https://github.com/NamesMT))
+
 ## v0.2.0
 
 
