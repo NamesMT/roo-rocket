@@ -1,5 +1,5 @@
+import { bundleConfigPack } from 'config-rocket'
 import { resolve } from 'pathe'
-import { bundleConfigPack } from 'roo-rocket'
 
 async function entry() {
   await bundleConfigPack({

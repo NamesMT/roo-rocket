@@ -38,6 +38,9 @@ importers:
       '@parcel/watcher':
         specifier: ^2.5.1
         version: 2.5.1
+      config-rocket:
+        specifier: ^0.2.2
+        version: 0.2.2(magicast@0.3.5)
       consola:
         specifier: ^3.4.2
         version: 3.4.2

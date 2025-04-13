@@ -1,6 +1,6 @@
 import { mkdir, rm } from 'node:fs/promises'
+import { rocketAssemble } from 'config-rocket'
 import { resolve } from 'pathe'
-import { rocketAssemble } from 'roo-rocket'
 
 export interface createDevEnvironmentOptions {
   /**
