@@ -2,33 +2,37 @@
 
 # Roo Rocket
 
-<h3>The all-in-one equipment that you and Roo wants!</h3>
+<h3>Easily create and deploy configurable <code>Roo Code</code> config packs!
+</h3>
 <img src="./branding.svg" alt="Roo Rocket's logo" width="320"/>
-<h5>(And an amazing base for troop trainers)</h5>
 
-<h2>Work-in-progress!</h2>
 </div>
 
 ## Overview
 
-***Roo Rocket**, the all-in-one equipment that you and Roo wants!"*
+**`roo-rocket`**, an extends of `config-rocket`, is a toolkit/engine (and a community webpage coming soon!) that helps you create or install configurable config packs, specfically targeting `Roo Code`:
 
-It's a set of tools that helps you create or install any complete config pack setup for **`Roo Code`**, including features like:
-  + Optimized Footgun (system prompt overrides)
-  + Memory Banks
-  + Smart / Custom Modes
-  + *And endlessly more!*
+In simple words, **`Roo Rocket`** help you easily install `Roo Code` configurations, which can have these features:
+  + 🔫 Optimized `Footgun` prompts (system prompt overrides)
+  + 📑 Memory Banks
+  + 🐱🦁🐯🐻 Smart / Custom Modes
+  + *And endlessly more!* 🚀
 
 `RR` for users:
-  + `Roo Rocket` for user is an engine, offering a super easy install of any `troop` (dictionary: collective of kangaroos) (`config pack`), whether its a public one shared by your friend, or your own, privately-stored.
+  + Super easy, safe install of any `config pack` / `troop` (dictionary: collective of kangaroos), whether its a public one shared by your friend, or your own, privately-stored.
+    + `RR` does not allow any code execution, so the installation of a config pack is safe, but you should verify if the files after unpacked are what you expect.  
+    *(Tip: you can ask `Roo` to help ignore the file's comments and strictly analyze the installed instruction files if there is anything unusual)*
 
 `RR` for creators (trainers):
-  + Fork, train your own `troop`, create a GitHub release, and everyone can use it via `Roo Rocket` CLI!
-  + Provides an elegant DX process for training, like auto loading a `snapshot` that you could test your prompts on, `context` support that help you reduces duplication work in multiple files.
+  + Type-safety and autocompletion while training your `troop`.
+  + Supports DX candies like:
+    + `fuel` context support that help you reduces duplication work in multiple files.
+    + `snapshot` that helps you easily setup/reset a codebase structure to test the agent. (coming soon)
+  + Create a GitHub release, or upload it somewhere, and everyone can use it via config-rocket CLI!
 
 ## Rationale
 
-`Roo Code` is shipping some amazing enhancements for customizations, and there's no good hub and base for Roo trainers yet, so, let's build one!
+`Roo Code` is shipping some amazing enhancements for customizations, and there's no centralized community and toolkit yet, so, let's build one!
 
 ## Objectives / Roadmap
 
@@ -71,13 +75,13 @@ npx roo-rocket --repo="NamesMT/roo-rocket"
 * `RR`: short for `Roo Rocket`
 
 * `rocket assembly` / `config pack` / `troop`:
-  * Refers to an object that `RR` can use to build out `Roo Code` configurations files, doing installations or development hot reloads.
+  * Refers to an object that `RR` can use to assemble (build out) configurations files, during installations or development hot reloads.
 
 * `Training your troop` / `Crafting rocket assembly` / `Crafting config pack`:
-  * Refers to the act of you creating the required structure for `RR` to work, more details will be available in `trainer` template in the future.
+  * Refers to the act of you creating the required structure for `RR` to work.
 
 * `Rocket launch`:
-  * Refers to the process of the user installing your `config pack`, imagine you "ship" / "launch" your `troop` on a rocket to the user.
+  * Refers to the process of the user installing your `troop`, imagine you "ship/launch" your `troop` on a rocket to the user.
 
 * `Rocket launch customize`:
   * Refers to the user's ability to configure the launch parameters and receive the wanted `troop`, i.e: with/without memory banks instructions, etc.
