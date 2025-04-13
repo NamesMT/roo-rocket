@@ -38,7 +38,7 @@ In simple words, **`Roo Rocket`** help you easily install `Roo Code` configurati
 
 ```sh
 # On any platform: `Mac / Linux / Windows`, run a command:
-npx roo-rocket --repo="NamesMT/roo-rocket"
+npx roo-rocket --repo="NamesMT/config-packs"
 
 # Interactively config your troop if config pack have parameters
 # Nothing more, enjoy :)
