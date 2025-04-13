@@ -1,5 +1,5 @@
+import path from 'node:path'
 import { configDefaults, defineConfig } from 'vitest/config'
-import sharedConfig from './shared.config'
 
 export default defineConfig({
   test: {
@@ -9,7 +9,8 @@ export default defineConfig({
     },
   },
   resolve: {
-    alias: sharedConfig.alias,
+    alias: {
+      '~': path.resolve(__dirname, './src'),
+    },
   },
-  ...sharedConfig,
 })

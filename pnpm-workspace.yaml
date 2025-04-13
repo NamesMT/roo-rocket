@@ -4,5 +4,6 @@ packages:
   - locals/*
 
 onlyBuiltDependencies:
+  - '@parcel/watcher'
   - esbuild
   - simple-git-hooks

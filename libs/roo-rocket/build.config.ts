@@ -8,7 +8,7 @@ export default defineBuildConfig({
 
     // CLI app
     {
-      input: 'src/cli',
+      input: 'src/cli-entry',
       declaration: false,
     },
   ],
