@@ -10,7 +10,7 @@
 
 ## Overview
 
-**`roo-rocket`**, an extends of `config-rocket`, is a toolkit/engine (and a community webpage coming soon!) that helps you create or install configurable config packs, specfically targeting `Roo Code`:
+**`roo-rocket`**, an extends of `config-rocket`, is a toolkit/engine (and a community webpage coming soon!) that helps you create or install configurable config packs, specfically targeting `Roo Code`.
 
 In simple words, **`Roo Rocket`** help you easily install `Roo Code` configurations, which can have these features:
   + 🔫 Optimized `Footgun` prompts (system prompt overrides)
@@ -28,7 +28,7 @@ In simple words, **`Roo Rocket`** help you easily install `Roo Code` configurati
   + Supports DX candies like:
     + `fuel` context support that help you reduces duplication work in multiple files.
     + `snapshot` that helps you easily setup/reset a codebase structure to test the agent. (coming soon)
-  + Create a GitHub release, or upload it somewhere, and everyone can use it via config-rocket CLI!
+  + Create a GitHub release, or upload it somewhere, and everyone can use it via `roo-rocket` CLI!
 
 ## Rationale
 
