@@ -47,6 +47,9 @@ importers:
       pathe:
         specifier: ^2.0.3
         version: 2.0.3
+      roo-rocket:
+        specifier: workspace:*
+        version: link:../../libs/roo-rocket
       std-env:
         specifier: ^3.9.0
         version: 3.9.0
@@ -63,18 +66,9 @@ importers:
       '@namesmt/utils':
         specifier: ^0.5.10
         version: 0.5.10
-      '@vitest/coverage-v8':
-        specifier: ^3.1.1
-        version: 3.1.1(vitest@3.1.1(@types/debug@4.1.12)(@types/node@22.14.0)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.1))
-      roo-rocket:
-        specifier: workspace:*
-        version: link:../../libs/roo-rocket
       unbuild:
         specifier: ^3.5.0
         version: 3.5.0(sass@1.86.3)(typescript@5.8.3)
-      vitest:
-        specifier: ^3.1.1
-        version: 3.1.1(@types/debug@4.1.12)(@types/node@22.14.0)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.1)
 
   libs/roo-rocket:
     dependencies:
