@@ -1,6 +1,40 @@
 # Changelog
 
 
+## v0.3.1
+
+[compare changes](https://github.com/namesmt/roo-rocket/compare/v0.3.0...v0.3.1)
+
+### 🩹 Fixes
+
+- Dev imports ([40ec88b](https://github.com/namesmt/roo-rocket/commit/40ec88b))
+
+### 💅 Refactors
+
+- Remove local `roo-rocket-dev` folder ([062eb49](https://github.com/namesmt/roo-rocket/commit/062eb49))
+
+### 📖 Documentation
+
+- **README:** Update ([7942eb4](https://github.com/namesmt/roo-rocket/commit/7942eb4))
+- **README:** Some corrections ([4a3a5b4](https://github.com/namesmt/roo-rocket/commit/4a3a5b4))
+- **README:** Add `trainer` usage, move `Roadmap` down ([70df8de](https://github.com/namesmt/roo-rocket/commit/70df8de))
+- **README:** Refer sample user usage to `config-packs` repo instead ([8432bbc](https://github.com/namesmt/roo-rocket/commit/8432bbc))
+- **README:** Update ([85e40fa](https://github.com/namesmt/roo-rocket/commit/85e40fa))
+
+### 🏡 Chore
+
+- **release:** V0.3.0 ([84cc3f0](https://github.com/namesmt/roo-rocket/commit/84cc3f0))
+- Should automatically commit `roo-rocket` changelog ([0b7d9ca](https://github.com/namesmt/roo-rocket/commit/0b7d9ca))
+- Clean out stuff from dev package ([22b5bcc](https://github.com/namesmt/roo-rocket/commit/22b5bcc))
+- Update `config-rocket` + deps ([6063192](https://github.com/namesmt/roo-rocket/commit/6063192))
+- Switch to `bump` as `--release --no-tag` creates unintended GH release ([5357317](https://github.com/namesmt/roo-rocket/commit/5357317))
+- **libs/roo-rocket:** Publish v0.3.1 ([465c887](https://github.com/namesmt/roo-rocket/commit/465c887))
+
+### ❤️ Contributors
+
+- NamesMT ([@NamesMT](https://github.com/NamesMT))
+- Trung Dang ([@NamesMT](https://github.com/NamesMT))
+
 ## v0.3.0
 
 [compare changes](https://github.com/namesmt/roo-rocket/compare/v0.2.0...v0.3.0)
