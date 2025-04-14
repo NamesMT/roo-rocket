@@ -39,7 +39,7 @@
     "test:types": "tsc --noEmit --skipLibCheck",
     "check": "pnpm lint && pnpm test:types && vitest run --coverage",
     "build": "unbuild",
-    "release": "pnpm dlx changelogen@latest --release --no-tag --publish",
+    "release": "pnpm dlx changelogen@latest --bump --publish",
     "prepublishOnly": "pnpm run build"
   },
   "dependencies": {
