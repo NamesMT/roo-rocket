@@ -45,7 +45,7 @@
   "dependencies": {
     "citty": "^0.1.6",
     "confbox": "^0.2.2",
-    "config-rocket": "^0.3.0",
+    "config-rocket": "^0.3.6",
     "consola": "^3.4.2",
     "hookable": "^5.5.3",
     "pathe": "^2.0.3",
