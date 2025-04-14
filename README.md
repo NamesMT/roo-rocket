@@ -47,7 +47,8 @@ npx roo-rocket --repo="NamesMT/config-packs"
 
 ## Usage (for trainers)
 
-* Generate a repo from [`config-packs-template`](https://github.com/NamesMT/config-packs-template), it's a template for creating your own `config packs` for `config-rocket` ecosystem.
+* Generate a repo from [`config-packs-template`](https://github.com/NamesMT/config-packs-template)
+  * It's a template to create your own `config packs` for `config-rocket` ecosystem.
 * Check `roo-rocket` rules here: [libs/roo-rocket](./libs/roo-rocket/README.md)
 * Start shipping!
 
