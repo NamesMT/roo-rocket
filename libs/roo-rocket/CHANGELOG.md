@@ -1,6 +1,23 @@
 # Changelog
 
 
+## v0.3.1
+
+[compare changes](https://github.com/namesmt/roo-rocket/compare/v0.3.1...v0.3.1)
+
+### 📖 Documentation
+
+- **README:** Update ([85e40fa](https://github.com/namesmt/roo-rocket/commit/85e40fa))
+
+### 🏡 Chore
+
+- Update `config-rocket` + deps ([6063192](https://github.com/namesmt/roo-rocket/commit/6063192))
+- Switch to `bump` as `--release --no-tag` creates unintended GH release ([5357317](https://github.com/namesmt/roo-rocket/commit/5357317))
+
+### ❤️ Contributors
+
+- NamesMT ([@NamesMT](https://github.com/NamesMT))
+
 ## v0.3.0
 
 [compare changes](https://github.com/namesmt/roo-rocket/compare/v0.2.0...v0.3.0)
