@@ -16,6 +16,7 @@ In simple words, **`Roo Rocket`** help you easily install `Roo Code` configurati
   + 🔫 Optimized `Footgun` prompts (system prompt overrides)
   + 📑 Memory Banks
   + 🐱🦁🐯🐻 Smart / Custom Modes
+  + 📚🕹️🔎 MCPs!
   + *And endlessly more!* 🚀
 
 `RR` for users:
