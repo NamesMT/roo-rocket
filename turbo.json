@@ -33,6 +33,9 @@
         "test"
       ]
     },
-    "release": {}
+    "bumpp": {
+      "cache": false,
+      "interactive": true
+    }
   }
 }

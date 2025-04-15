@@ -21,7 +21,8 @@
     "dev": "turbo run dev",
     "test": "turbo run test",
     "lint": "turbo run lint",
-    "release": "turbo run release && pnpm dlx changelogen@latest --release --push",
+    "bumpp": "turbo run bumpp",
+    "release": "pnpm dlx changelogen@latest --release --push",
     "prepare": "simple-git-hooks"
   },
   "dependencies": {},
