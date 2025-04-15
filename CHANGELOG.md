@@ -1,6 +1,20 @@
 # Changelog
 
 
+## v0.3.2
+
+[compare changes](https://github.com/namesmt/roo-rocket/compare/ls...v0.3.2)
+
+### 🏡 Chore
+
+- Remove individual package's CHANGELOG, use `bumpp` only instead of changelogen ([598db29](https://github.com/namesmt/roo-rocket/commit/598db29))
+- Update root scripts ([766a3ba](https://github.com/namesmt/roo-rocket/commit/766a3ba))
+- **libs/roo-rocket:** Release v0.3.2 ([0ca6cc5](https://github.com/namesmt/roo-rocket/commit/0ca6cc5))
+
+### ❤️ Contributors
+
+- NamesMT ([@NamesMT](https://github.com/NamesMT))
+
 ## v0.3.1
 
 [compare changes](https://github.com/namesmt/roo-rocket/compare/v0.3.0...v0.3.1)

@@ -1,7 +1,7 @@
 {
   "name": "roo-rocket--mono",
   "type": "module",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "private": true,
   "packageManager": "pnpm@10.8.1",
   "author": "NamesMT <dangquoctrung123@gmail.com>",
