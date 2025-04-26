@@ -1,6 +1,24 @@
 # Changelog
 
 
+## v0.3.4
+
+[compare changes](https://github.com/namesmt/roo-rocket/compare/v0.3.3...v0.3.4)
+
+### 🚀 Enhancements
+
+- Add hook for .roomodes merge dedupe ([2b00e16](https://github.com/namesmt/roo-rocket/commit/2b00e16))
+- Add hook for `mcp.json` merge ([8f1ee5d](https://github.com/namesmt/roo-rocket/commit/8f1ee5d))
+
+### 🏡 Chore
+
+- Add publish script for root ([53ad050](https://github.com/namesmt/roo-rocket/commit/53ad050))
+- **libs/roo-rocket:** Release v0.3.4 ([5e6491b](https://github.com/namesmt/roo-rocket/commit/5e6491b))
+
+### ❤️ Contributors
+
+- NamesMT ([@NamesMT](https://github.com/NamesMT))
+
 ## v0.3.3
 
 [compare changes](https://github.com/namesmt/roo-rocket/compare/v0.3.2...v0.3.3)
