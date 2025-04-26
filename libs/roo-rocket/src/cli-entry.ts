@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import type { UnpackOptions } from 'config-rocket/cli'
 import { defineCommand, runMain } from 'citty'
 import { getValidGhRepoReleaseAssets, promptSelectGhAsset, unpackFromUrl } from 'config-rocket/cli'
