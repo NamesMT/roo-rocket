@@ -36,6 +36,7 @@
     "bumpp": {
       "cache": false,
       "interactive": true
-    }
+    },
+    "publish": {}
   }
 }

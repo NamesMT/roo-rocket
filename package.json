@@ -22,6 +22,7 @@
     "test": "turbo run test",
     "lint": "turbo run lint",
     "bumpp": "turbo run bumpp",
+    "publish": "turbo run publish",
     "release": "pnpm dlx changelogen@latest --release --push",
     "prepare": "simple-git-hooks"
   },
