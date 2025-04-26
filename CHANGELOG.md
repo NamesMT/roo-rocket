@@ -1,6 +1,27 @@
 # Changelog
 
 
+## v0.3.3
+
+[compare changes](https://github.com/namesmt/roo-rocket/compare/v0.3.2...v0.3.3)
+
+### 🩹 Fixes
+
+- Add node shebang to cli entry ([9b7dbc0](https://github.com/namesmt/roo-rocket/commit/9b7dbc0))
+
+### 📖 Documentation
+
+- **README:** Add `rocket-zip` usage, general rephrase ([ec76acc](https://github.com/namesmt/roo-rocket/commit/ec76acc))
+
+### 🏡 Chore
+
+- Update deps ([3b6cfe7](https://github.com/namesmt/roo-rocket/commit/3b6cfe7))
+- **libs/roo-rocket:** Release v0.3.3 ([db691a3](https://github.com/namesmt/roo-rocket/commit/db691a3))
+
+### ❤️ Contributors
+
+- NamesMT ([@NamesMT](https://github.com/NamesMT))
+
 ## v0.3.2
 
 [compare changes](https://github.com/namesmt/roo-rocket/compare/ls...v0.3.2)
