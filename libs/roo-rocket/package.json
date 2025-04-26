@@ -46,8 +46,9 @@
   "dependencies": {
     "citty": "^0.1.6",
     "confbox": "^0.2.2",
-    "config-rocket": "^0.3.10",
+    "config-rocket": "^0.3.12",
     "consola": "^3.4.2",
+    "defu": "^6.1.4",
     "hookable": "^5.5.3",
     "pathe": "^2.0.3",
     "std-env": "^3.9.0"
