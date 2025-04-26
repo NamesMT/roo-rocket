@@ -43,6 +43,21 @@ rooRocketUnpackHookable.hook('onFileOutputJsonMerge', async (state) => {
   }
 })
 
+// Hook to handle mcp.json merging
+rooRocketUnpackHookable.hook('onFileOutputJsonMerge', async (state) => {
+  if (state.filePath.endsWith('.roo/mcp.json')) {
+    const oldData = JSON.parse(await readFile(state.filePath, 'utf8'))
+    const newData = JSON.parse(state.data)
+    const mergedData = structuredClone(newData)
+    for (const [key, value] of Object.entries(oldData.mcpServers)) {
+      if (!(key in mergedData.mcpServers))
+        mergedData.mcpServers[key] = value
+    }
+
+    state.mergeResult = JSON.stringify(mergedData, null, 2)
+  }
+})
+
 const main = defineCommand({
   meta: {
     name: 'roo-rocket',
