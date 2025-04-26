@@ -20,7 +20,7 @@ In simple words, **`Roo Rocket`** help you easily install `Roo Code` configurati
   + *And endlessly more!* 🚀
 
 `RR` for users:
-  + Super easy, safe install of any `config pack` / `troop` (dictionary: collective of kangaroos), whether its a public one shared by your friend, or your own, privately-stored.
+  + Super easy, safe install of any zip archive / `troop` (config pack) (dictionary: collective of kangaroos), whether its a public one shared by your friend, or your own, privately-stored.
     + `RR` does not allow any code execution, so the installation of a config pack is safe, but you should verify if the files after unpacked are what you expect.  
     *(Tip: you can ask `Roo` to help ignore the file's comments and strictly analyze the installed instruction files if there is anything unusual)*
 
@@ -47,10 +47,16 @@ npx roo-rocket --repo="NamesMT/config-packs"
 
 ## Usage (for trainers)
 
-* Generate a repo from [`config-packs-template`](https://github.com/NamesMT/config-packs-template)
-  * It's a template to create your own `config packs` for `config-rocket` ecosystem.
-* Check `roo-rocket` rules here: [libs/roo-rocket](./libs/roo-rocket/README.md)
-* Start shipping!
+* There are two ways to start:
+  * For the full experience:
+    * Generate a repo from [`config-packs-template`](https://github.com/NamesMT/config-packs-template)
+      * It's a template to create your own `config packs` for `config-rocket` ecosystem.
+    * Check `roo-rocket` rules here: [libs/roo-rocket](./libs/roo-rocket/README.md)
+  * Or a simple, fast start: just create a zip archive of your configuration files!
+    * *Tip: you can use  
+    `npx --package=config-rocket rocket-zip -i=".roomodes"`  
+    if you don't yet have a handy zipper.*
+* Users can now use the `roo-rocket` CLI to install your configurations.
 
 ## Notes:
 
