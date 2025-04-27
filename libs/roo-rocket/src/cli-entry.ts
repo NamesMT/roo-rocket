@@ -1,69 +1,8 @@
 #!/usr/bin/env node
 
-import type { UnpackOptions } from 'config-rocket/cli'
-import { readFile } from 'node:fs/promises'
 import { defineCommand, runMain } from 'citty'
 import { getValidGhRepoReleaseAssets, promptSelectGhAsset, unpackFromUrl } from 'config-rocket/cli'
-import defu from 'defu'
-import { createHooks } from 'hookable'
-import { logger } from '~/helpers/logger'
-
-// Main hookable instance
-const rooRocketUnpackHookable = createHooks() as NonNullable<UnpackOptions['hookable']>
-
-// Hook to only allow specific file patterns
-rooRocketUnpackHookable.hook('onFrameFile', ({ filePath, skipFile }) => {
-  if (!/^\.(?:roomodes|roo\/.*)$/.test(filePath)) {
-    logger.warn(`Unallowed frame structure found: ${filePath}, skipping...`)
-    skipFile()
-  }
-})
-
-// Hooks to handle .roomodes merging
-rooRocketUnpackHookable.hook('onFileOutput', async (state) => {
-  if (state.filePath.endsWith('.roomodes')) {
-    state.mergeType = 'json'
-    state.isValidFileToMerge = true
-  }
-})
-rooRocketUnpackHookable.hook('onFileOutputJsonMerge', async (state) => {
-  if (state.filePath.endsWith('.roomodes')) {
-    const existingModeSlugs = new Set<string>()
-    const oldData = JSON.parse(await readFile(state.filePath, 'utf8'))
-    const newData = JSON.parse(state.data)
-    const mergedData = defu(newData, oldData)
-    const dedupedModes = mergedData.customModes.filter((mode: any) => {
-      if (existingModeSlugs.has(mode.slug)) {
-        logger.info(`Present roomode entry overwritten: ${mode.slug}`)
-        return false
-      }
-
-      return existingModeSlugs.add(mode.slug) && true
-    })
-
-    const result = { ...mergedData, customModes: dedupedModes }
-    state.mergeResult = JSON.stringify(result, null, 2)
-  }
-})
-
-// Hook to handle mcp.json merging
-rooRocketUnpackHookable.hook('onFileOutputJsonMerge', async (state) => {
-  if (state.filePath.endsWith('.roo/mcp.json')) {
-    const oldData = JSON.parse(await readFile(state.filePath, 'utf8'))
-    const newData = JSON.parse(state.data)
-    const mergedData = structuredClone(newData)
-    for (const [key, value] of Object.entries(oldData.mcpServers)) {
-      if (key in mergedData.mcpServers) {
-        logger.info(`Present mcp server entry overwritten: ${key}`)
-        continue
-      }
-
-      mergedData.mcpServers[key] = value
-    }
-
-    state.mergeResult = JSON.stringify(mergedData, null, 2)
-  }
-})
+import { hookable } from '~/rr/hookable'
 
 const main = defineCommand({
   meta: {
@@ -114,7 +53,7 @@ const main = defineCommand({
       return await unpackFromUrl(url, {
         nonAssemblyBehavior,
         sha256,
-        hookable: rooRocketUnpackHookable,
+        hookable,
       })
     }
 
@@ -138,7 +77,7 @@ const main = defineCommand({
     return await unpackFromUrl(selectedAsset.browser_download_url, {
       nonAssemblyBehavior,
       sha256,
-      hookable: rooRocketUnpackHookable,
+      hookable,
     })
   },
 })
