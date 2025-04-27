@@ -7,10 +7,7 @@ export default defineBuildConfig({
     'src/index',
 
     // CLI app
-    {
-      input: 'src/cli-entry',
-      declaration: false,
-    },
+    'src/cli-entry',
   ],
   declaration: 'node16',
   clean: true,
