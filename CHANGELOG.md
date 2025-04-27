@@ -1,6 +1,27 @@
 # Changelog
 
 
+## v0.3.5
+
+[compare changes](https://github.com/namesmt/roo-rocket/compare/v0.3.4...v0.3.5)
+
+### 🚀 Enhancements
+
+- Print info about overwritten entries ([bee9868](https://github.com/namesmt/roo-rocket/commit/bee9868))
+
+### 📖 Documentation
+
+- **README:** Update ([7f88c45](https://github.com/namesmt/roo-rocket/commit/7f88c45))
+
+### 🏡 Chore
+
+- **libs/roo-rocket:** Release v0.3.5 ([a27dc8a](https://github.com/namesmt/roo-rocket/commit/a27dc8a))
+- Minor: use `npm publish` instead of `pnpm publish` ([4b72e87](https://github.com/namesmt/roo-rocket/commit/4b72e87))
+
+### ❤️ Contributors
+
+- NamesMT ([@NamesMT](https://github.com/NamesMT))
+
 ## v0.3.4
 
 [compare changes](https://github.com/namesmt/roo-rocket/compare/v0.3.3...v0.3.4)
