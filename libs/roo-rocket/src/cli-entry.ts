@@ -77,17 +77,46 @@ const main = defineCommand({
     },
     repo: {
       type: 'string',
-      description: 'The github repository slug (e.g: NamesMT/roo-rocket)',
+      description: 'The github repository slug (e.g: NamesMT/config-packs), will list out available archives from latest release.',
+    },
+    pack: {
+      type: 'string',
+      description: 'The config pack name to auto-select from the repo',
+    },
+    nonAssemblyBehavior: {
+      type: 'boolean',
+      description: [
+        'Control the behavior when encountering non-assembly config packs:',
+        '"true": will extract without asking',
+        '"false": will abort the process',
+        'Default (not specified): will prompt user',
+      ].join('\n'),
+      default: undefined,
+    },
+    sha256: {
+      type: 'string',
+      description: `If specified, will verify the downloaded archive's sha256 hash (base64url)`,
     },
   },
   async run({ args }) {
-    const { url, repo } = args
+    const {
+      url,
+      repo,
+      pack,
+      nonAssemblyBehavior,
+      sha256,
+    } = args
 
     if (!url && !repo)
       throw new Error('`url` or `repo` is required')
 
-    if (url)
-      return await unpackFromUrl(url, { hookable: rooRocketUnpackHookable })
+    if (url) {
+      return await unpackFromUrl(url, {
+        nonAssemblyBehavior,
+        sha256,
+        hookable: rooRocketUnpackHookable,
+      })
+    }
 
     const repoPatternMatch = repo.match(/^([\w-]+)\/([\w-]+)$/)
     if (!repoPatternMatch)
@@ -98,9 +127,19 @@ const main = defineCommand({
     if (!availableAssets.length)
       throw new Error(`No assets found for "${owner}/${name}"'s latest release`)
 
-    const selectedAsset = await promptSelectGhAsset(availableAssets)
+    const selectedAsset = pack
+      ? availableAssets.find(a => a.name === pack)
+      : await promptSelectGhAsset(availableAssets)
 
-    return await unpackFromUrl(selectedAsset.browser_download_url, { hookable: rooRocketUnpackHookable })
+    // This is only encountered if user provided a pack name, so error message is specific to it
+    if (!selectedAsset)
+      throw new Error(`pack "${pack}" is not found in the latest release of "${owner}/${name}"`)
+
+    return await unpackFromUrl(selectedAsset.browser_download_url, {
+      nonAssemblyBehavior,
+      sha256,
+      hookable: rooRocketUnpackHookable,
+    })
   },
 })
 
