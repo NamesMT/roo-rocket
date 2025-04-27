@@ -13,7 +13,7 @@
 **`roo-rocket`**, an extends of `config-rocket`, is a toolkit/engine (and a community webpage coming soon!) that helps you create or install configurable config packs, specfically targeting `Roo Code`.
 
 In simple words, **`Roo Rocket`** help you easily install `Roo Code` configurations, which can have these features:
-  + 🔫 Optimized `Footgun` prompts (system prompt overrides)
+  + 🔫 (Dangerously) optimized `Footgun` prompts (system prompt overrides)
   + 📑 Memory Banks
   + 🐱🦁🐯🐻 Smart / Custom Modes
   + 📚🕹️🔎 MCPs!
@@ -33,7 +33,7 @@ In simple words, **`Roo Rocket`** help you easily install `Roo Code` configurati
 
 ## Rationale
 
-`Roo Code` is shipping some amazing enhancements for customizations, and there's no centralized community and toolkit yet, so, let's build one!
+The strength of `Roo Code` lies in its customization power, and there's no centralized community and toolkit yet, so, let's build one!
 
 ## Usage (for users)
 
@@ -41,7 +41,7 @@ In simple words, **`Roo Rocket`** help you easily install `Roo Code` configurati
 # On any platform: `Mac / Linux / Windows`, run a command:
 npx roo-rocket --repo="NamesMT/config-packs"
 
-# Interactively config your troop if config pack have parameters
+# Interactively configure the installation parameters (if any)
 # Nothing more, enjoy :)
 ```
 
@@ -50,7 +50,7 @@ npx roo-rocket --repo="NamesMT/config-packs"
 * There are two ways to start:
   * For the full experience:
     * Generate a repo from [`config-packs-template`](https://github.com/NamesMT/config-packs-template)
-      * It's a template to create your own `config packs` for `config-rocket` ecosystem.
+      * > It's a template to create your own `config packs` for `config-rocket` ecosystem.
     * Check `roo-rocket` rules here: [libs/roo-rocket](./libs/roo-rocket/README.md)
   * Or a simple, fast start: just create a zip archive of your configuration files!
     * *Tip: you can use  
@@ -60,50 +60,12 @@ npx roo-rocket --repo="NamesMT/config-packs"
 
 ## Notes:
 
-### RR Terms Explained:
+### [> RR Terms Explained <](./TERMS_EXPLATION.md)
 
-* `RR`: short for `Roo Rocket`
+## Pending roadmap
 
-* `rocket assembly` / `config pack` / `troop`:
-  * Refers to an object that `RR` can use to assemble (build out) configurations files, during installations or development hot reloads.
-
-* `Training your troop` / `Crafting rocket assembly` / `Crafting config pack`:
-  * Refers to the act of you creating the required structure for `RR` to work.
-
-* `Rocket launch`:
-  * Refers to the process of the user installing your `troop`, imagine you "ship/launch" your `troop` on a rocket to the user.
-
-* `Rocket launch customize`:
-  * Refers to the user's ability to configure the launch parameters and receive the wanted `troop`, i.e: with/without memory banks instructions, etc.
-
-## Objectives / Roadmap
-
-* [x] A pretty, *OPTIMIZED* image!
-* [x] Finish the initial repo layout.
-  * [x] Main engine and CLI.
-    * [x] Ability to assemble the rocket from `frame` and `fuel`.
-    * [x] Ability to customize the rocket launch using `rocket.config.ts`.
-    * [x] Ability to bundle the `config pack` for safe distribution.
-    * [x] CLI: Ability to download and unpack a bundled `config pack`.
-      * [x] From URL.
-      * [x] Shortcut for GitHub repo with release.
-  * [x] Local development app for playground testing.
-* [x] Development environment with amazing DX and power.
-  * [x] DRY: `fuel` context system that allows reusable contexts to be defined and used across multiple files, reducing duplication.
-  * [x] Configurable: Allowing for users to choose their own flavors of Rocket.
-* [x] Creator template for `troop` trainers.
-  * Public template available: [config-packs-template](https://github.com/NamesMT/config-packs-template)
-* [x] Simple setup.
-  * Installing should be a breeze, simply execute a command, on any platform!
-* [ ] Working base prompts
-* [ ] Smart, optimized modes
 * [ ] A webpage, featuring the community Roo trainers
-* [x] Splitting the main engine to a general-purpose `config-rocket`
-  * [x] Migrate to use `config-rocket` instead of code duplication
-
-### References:
-
-`Roo Rocket` is still a work-in-progress, there isn't any feature-complete config packs yet, if you need something similar right now, try my [`RooFlow generic`](https://github.com/NamesMT/RooFlow-generic) config, it's a fork of [`RooFlow`](https://github.com/GreatScottyMac/RooFlow), enter the links to learn more.
+* [ ] Recruit more Roo trainers to join the community, contact me if **YOU** are interested!
 
 ## License
 
