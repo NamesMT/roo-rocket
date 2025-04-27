@@ -33,9 +33,12 @@ rooRocketUnpackHookable.hook('onFileOutputJsonMerge', async (state) => {
     const newData = JSON.parse(state.data)
     const mergedData = defu(newData, oldData)
     const dedupedModes = mergedData.customModes.filter((mode: any) => {
-      if (!existingModeSlugs.has(mode.slug))
-        return existingModeSlugs.add(mode.slug)
-      return false
+      if (existingModeSlugs.has(mode.slug)) {
+        logger.info(`Present roomode entry overwritten: ${mode.slug}`)
+        return false
+      }
+
+      return existingModeSlugs.add(mode.slug) && true
     })
 
     const result = { ...mergedData, customModes: dedupedModes }
@@ -50,8 +53,12 @@ rooRocketUnpackHookable.hook('onFileOutputJsonMerge', async (state) => {
     const newData = JSON.parse(state.data)
     const mergedData = structuredClone(newData)
     for (const [key, value] of Object.entries(oldData.mcpServers)) {
-      if (!(key in mergedData.mcpServers))
-        mergedData.mcpServers[key] = value
+      if (key in mergedData.mcpServers) {
+        logger.info(`Present mcp server entry overwritten: ${key}`)
+        continue
+      }
+
+      mergedData.mcpServers[key] = value
     }
 
     state.mergeResult = JSON.stringify(mergedData, null, 2)
