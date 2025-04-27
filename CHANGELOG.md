@@ -1,6 +1,26 @@
 # Changelog
 
 
+## v0.3.6
+
+[compare changes](https://github.com/namesmt/roo-rocket/compare/v0.3.5...v0.3.6)
+
+### 💅 Refactors
+
+- Move `hookable` defines to `rr/hookable` ([543365f](https://github.com/namesmt/roo-rocket/commit/543365f))
+- Minor syntax clean ([0956991](https://github.com/namesmt/roo-rocket/commit/0956991))
+
+### 🏡 Chore
+
+- Update deps ([2e8ef1f](https://github.com/namesmt/roo-rocket/commit/2e8ef1f))
+- Align CLI feats with newest `config-rocket` ([d651b43](https://github.com/namesmt/roo-rocket/commit/d651b43))
+- Exports `hookable` ([bf0a1aa](https://github.com/namesmt/roo-rocket/commit/bf0a1aa))
+- Rename `publish` script to `doPublish` bc bug and confusion ([8140732](https://github.com/namesmt/roo-rocket/commit/8140732))
+
+### ❤️ Contributors
+
+- NamesMT ([@NamesMT](https://github.com/NamesMT))
+
 ## v0.3.5
 
 [compare changes](https://github.com/namesmt/roo-rocket/compare/v0.3.4...v0.3.5)
