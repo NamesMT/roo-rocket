@@ -43,10 +43,17 @@
     "doPublish": "npm publish",
     "prepublishOnly": "pnpm run build"
   },
+  "peerDependencies": {
+    "config-rocket": "^0.3.16"
+  },
+  "peerDependenciesMeta": {
+    "config-rocket": {
+      "optional": false
+    }
+  },
   "dependencies": {
     "citty": "^0.1.6",
     "confbox": "^0.2.2",
-    "config-rocket": "^0.3.13",
     "consola": "^3.4.2",
     "defu": "^6.1.4",
     "hookable": "^5.5.3",
