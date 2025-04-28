@@ -27,9 +27,9 @@ const main = defineCommand({
       type: 'boolean',
       description: [
         'Control the behavior when encountering non-assembly config packs:',
-        '"true": will extract without asking',
-        '"false": will abort the process',
-        'Default (not specified): will prompt user',
+        '  \t"true": will extract without asking',
+        '  \t"false": will abort the process',
+        '  \tDefault (not specified): will prompt user.\n',
       ].join('\n'),
       default: undefined,
     },
