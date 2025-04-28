@@ -1,6 +1,27 @@
 # Changelog
 
 
+## v0.3.7
+
+[compare changes](https://github.com/namesmt/roo-rocket/compare/v0.3.6...v0.3.7)
+
+### 🚀 Enhancements
+
+- Add `createHookable` function ([f7412d2](https://github.com/namesmt/roo-rocket/commit/f7412d2))
+
+### 📖 Documentation
+
+- **roo-rocket/README:** Update ([a73c5fd](https://github.com/namesmt/roo-rocket/commit/a73c5fd))
+
+### 🏡 Chore
+
+- Update, move `config-rocket` to peerDeps ([770f7ec](https://github.com/namesmt/roo-rocket/commit/770f7ec))
+- **libs/roo-rocket:** Release v0.3.7 ([e88a821](https://github.com/namesmt/roo-rocket/commit/e88a821))
+
+### ❤️ Contributors
+
+- NamesMT ([@NamesMT](https://github.com/NamesMT))
+
 ## v0.3.6
 
 [compare changes](https://github.com/namesmt/roo-rocket/compare/v0.3.5...v0.3.6)
