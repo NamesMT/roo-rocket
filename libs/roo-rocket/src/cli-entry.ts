@@ -37,6 +37,10 @@ const main = defineCommand({
       type: 'string',
       description: `If specified, will verify the downloaded archive's sha256 hash (base64url)`,
     },
+    cwd: {
+      type: 'string',
+      description: 'The working directory for the process',
+    },
     mp: {
       type: 'string',
       description: 'Special arg for Roo Marketplace use, accepts a JSON string for context options',
@@ -49,6 +53,7 @@ const main = defineCommand({
       pack,
       nonAssemblyBehavior,
       sha256,
+      cwd,
       mp,
     } = args
 
@@ -65,6 +70,7 @@ const main = defineCommand({
       return await unpackFromUrl(url, {
         nonAssemblyBehavior,
         sha256,
+        cwd,
         hookable,
       })
     }
@@ -89,6 +95,7 @@ const main = defineCommand({
     return await unpackFromUrl(selectedAsset.browser_download_url, {
       nonAssemblyBehavior,
       sha256,
+      cwd,
       hookable,
     })
   },
