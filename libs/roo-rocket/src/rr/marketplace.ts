@@ -4,6 +4,7 @@
  */
 
 import type { UnpackOptions } from 'config-rocket/cli'
+import { logger } from '~/helpers/logger'
 
 export type MarketplaceContext = (
   {
@@ -40,11 +41,11 @@ export function assertsMpContext(context: MarketplaceContext): asserts context i
 
 export function registerMarketplaceHooks(hookable: NonNullable<UnpackOptions['hookable']>, context: MarketplaceContext) {
   hookable.hook('onFrameFile', ({ filePath, skipFile }) => {
+    const allowedFiles = new Set(['.roo/mcp.json', '.roomodes'])
     if (context.target === 'global') {
-      if (!(
-        filePath.endsWith('/.roo/mcp.json') || filePath.endsWith('/.roomodes')
-      )) {
-        skipFile('Unsupported file for global installation.')
+      if (!allowedFiles.has(filePath)) {
+        logger.warn(`Unsupported file for global installation: ${filePath}, skipping...`)
+        skipFile()
       }
     }
   })
