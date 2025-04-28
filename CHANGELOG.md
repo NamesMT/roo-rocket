@@ -1,6 +1,24 @@
 # Changelog
 
 
+## v0.3.10
+
+[compare changes](https://github.com/namesmt/roo-rocket/compare/v0.3.9...v0.3.10)
+
+### 🚀 Enhancements
+
+- Add `cwd` CLI arg ([b54f25f](https://github.com/namesmt/roo-rocket/commit/b54f25f))
+
+### 🏡 Chore
+
+- **libs/roo-rocket:** Release v0.3.9 ([4013157](https://github.com/namesmt/roo-rocket/commit/4013157))
+- Minor ([39e5098](https://github.com/namesmt/roo-rocket/commit/39e5098))
+- **libs/roo-rocket:** Release v0.3.10 ([d4d63e1](https://github.com/namesmt/roo-rocket/commit/d4d63e1))
+
+### ❤️ Contributors
+
+- NamesMT ([@NamesMT](https://github.com/NamesMT))
+
 ## v0.3.8
 
 [compare changes](https://github.com/namesmt/roo-rocket/compare/v0.3.7...v0.3.8)
