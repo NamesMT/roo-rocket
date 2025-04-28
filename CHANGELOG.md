@@ -1,6 +1,22 @@
 # Changelog
 
 
+## v0.3.8
+
+[compare changes](https://github.com/namesmt/roo-rocket/compare/v0.3.7...v0.3.8)
+
+### 🚀 Enhancements
+
+- Add `rr/marketplace` logics ([c39baec](https://github.com/namesmt/roo-rocket/commit/c39baec))
+
+### 🏡 Chore
+
+- **libs/roo-rocket:** Release v0.3.8 ([6a97fe7](https://github.com/namesmt/roo-rocket/commit/6a97fe7))
+
+### ❤️ Contributors
+
+- NamesMT ([@NamesMT](https://github.com/NamesMT))
+
 ## v0.3.7
 
 [compare changes](https://github.com/namesmt/roo-rocket/compare/v0.3.6...v0.3.7)
