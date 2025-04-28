@@ -7,7 +7,7 @@ import { registerMarketplaceHooks } from '~/rr/marketplace'
 describe('registerMarketplaceHooks', () => {
   it('should register hooks without errors', () => {
     const hookable = new Hookable()
-    const context: MarketplaceContext = { target: 'local' }
+    const context: MarketplaceContext = { target: 'project' }
     expect(() => registerMarketplaceHooks(hookable, context)).not.toThrow()
   })
 
@@ -35,7 +35,7 @@ describe('registerMarketplaceHooks', () => {
       // We test this by ensuring no error is thrown when the hook is called,
       // even though the internal logic wouldn't run for local.
       const hookable = new Hookable()
-      const context: MarketplaceContext = { target: 'local' }
+      const context: MarketplaceContext = { target: 'project' }
       registerMarketplaceHooks(hookable, context)
 
       const payload = { unzipped: { 'any-file.txt': Buffer.from('test') } }
@@ -68,7 +68,7 @@ describe('registerMarketplaceHooks', () => {
 
     it('should not rename files for local target', async () => {
       const hookable = new Hookable()
-      const context: MarketplaceContext = { target: 'local' }
+      const context: MarketplaceContext = { target: 'project' }
       registerMarketplaceHooks(hookable, context)
 
       const stateMcp = { filePath: '/output/path/.roo/mcp.json', content: Buffer.from('{}') }

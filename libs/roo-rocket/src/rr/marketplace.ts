@@ -7,7 +7,7 @@ import type { Hookable } from 'hookable'
 
 export type MarketplaceContext = (
   {
-    target: 'local'
+    target: 'project'
   } | {
     target: 'global'
     globalFileNames: {
@@ -22,7 +22,7 @@ export function assertsMpContext(context: MarketplaceContext): asserts context i
   if (!context.target)
     throw new Error('`target` is required')
 
-  if (context.target !== 'global' && context.target !== 'local')
+  if (context.target !== 'global' && context.target !== 'project')
     throw new Error('`target` must be either "global" or "local"')
 
   // ### Global File Names
