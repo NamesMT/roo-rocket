@@ -3,7 +3,7 @@
  * @description This module contains special instructions and functions for Roo Marketplace use.
  */
 
-import type { Hookable } from 'hookable'
+import type { UnpackOptions } from 'config-rocket/cli'
 
 export type MarketplaceContext = (
   {
@@ -38,13 +38,13 @@ export function assertsMpContext(context: MarketplaceContext): asserts context i
   }
 }
 
-export function registerMarketplaceHooks(hookable: Hookable, context: MarketplaceContext) {
-  hookable.hook('onExtract', ({ unzipped }) => {
+export function registerMarketplaceHooks(hookable: NonNullable<UnpackOptions['hookable']>, context: MarketplaceContext) {
+  hookable.hook('onFrameFile', ({ filePath, skipFile }) => {
     if (context.target === 'global') {
-      const allowedFiles = new Set(['.roo/mcp.json', '.roomodes'])
-      for (const key in unzipped) {
-        if (!allowedFiles.has(key))
-          throw new Error(`Unsupported file for global installation: ${key}`)
+      if (!(
+        filePath.endsWith('/.roo/mcp.json') || filePath.endsWith('/.roomodes')
+      )) {
+        skipFile('Unsupported file for global installation.')
       }
     }
   })
