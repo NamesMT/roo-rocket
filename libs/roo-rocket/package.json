@@ -44,7 +44,7 @@
     "prepublishOnly": "pnpm run build"
   },
   "peerDependencies": {
-    "config-rocket": "^0.3.16"
+    "config-rocket": "^0.3.19"
   },
   "peerDependenciesMeta": {
     "config-rocket": {

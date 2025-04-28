@@ -3,6 +3,7 @@
 import { defineCommand, runMain } from 'citty'
 import { getValidGhRepoReleaseAssets, promptSelectGhAsset, unpackFromUrl } from 'config-rocket/cli'
 import { hookable } from '~/rr/hookable'
+import { assertsMpContext, registerMarketplaceHooks } from '~/rr/marketplace'
 
 const main = defineCommand({
   meta: {
@@ -36,6 +37,10 @@ const main = defineCommand({
       type: 'string',
       description: `If specified, will verify the downloaded archive's sha256 hash (base64url)`,
     },
+    mp: {
+      type: 'string',
+      description: 'Special arg for Roo Marketplace use, accepts a JSON string for context options',
+    },
   },
   async run({ args }) {
     const {
@@ -44,10 +49,17 @@ const main = defineCommand({
       pack,
       nonAssemblyBehavior,
       sha256,
+      mp,
     } = args
 
     if (!url && !repo)
       throw new Error('`url` or `repo` is required')
+
+    if (mp) {
+      const mpContext = JSON.parse(mp)
+      assertsMpContext(mpContext)
+      registerMarketplaceHooks(hookable, mpContext)
+    }
 
     if (url) {
       return await unpackFromUrl(url, {
