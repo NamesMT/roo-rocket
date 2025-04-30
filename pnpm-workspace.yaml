@@ -3,6 +3,10 @@ packages:
   - libs/*
   - locals/*
 
+catalogs:
+  peer:
+    config-rocket: ^0.4.2
+
 onlyBuiltDependencies:
   - '@parcel/watcher'
   - esbuild

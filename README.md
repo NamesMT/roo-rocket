@@ -76,7 +76,7 @@ npx roo-rocket --repo="NamesMT/config-packs"
   * For a simple, fast start:
     * Just create a zip archive of your configuration files!  
     *(Tip: you can use  
-    `npx --package=config-rocket rocket-zip -i=".roomodes"`  
+    `npx config-rocket zip -i=".roomodes"`  
     if you don't yet have a handy zipper.)*
 * Users can now use the `roo-rocket` CLI to install your configurations.
 

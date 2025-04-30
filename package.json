@@ -33,7 +33,7 @@
     "lint-staged": "^15.5.1",
     "simple-git-hooks": "^2.13.0",
     "std-env": "^3.9.0",
-    "tsx": "^4.19.3",
+    "tsx": "^4.19.4",
     "turbo": "^2.5.2",
     "typescript": "^5.8.3"
   },

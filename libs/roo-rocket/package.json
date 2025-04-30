@@ -40,11 +40,11 @@
     "check": "pnpm lint && pnpm test:types && vitest run --coverage",
     "build": "unbuild",
     "bumpp": "pnpm dlx bumpp --no-commit --no-tag --no-push",
-    "doPublish": "npm publish",
+    "doPublish": "pnpm publish",
     "prepublishOnly": "pnpm run build"
   },
   "peerDependencies": {
-    "config-rocket": "^0.3.19"
+    "config-rocket": "catalog:peer"
   },
   "peerDependenciesMeta": {
     "config-rocket": {

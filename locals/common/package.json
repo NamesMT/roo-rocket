@@ -8,6 +8,7 @@
   },
   "devDependencies": {
     "@local/tsconfig": "workspace:*",
+    "@types/node": "^20.17.32",
     "pathe": "^2.0.3"
   }
 }
