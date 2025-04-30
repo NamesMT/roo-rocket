@@ -1,6 +1,35 @@
 # Changelog
 
 
+## v0.3.14
+
+[compare changes](https://github.com/namesmt/roo-rocket/compare/v0.3.10...v0.3.14)
+
+### 🩹 Fixes
+
+- Rocket assembly were not installable to global, update guard hook logic ([2a9ed50](https://github.com/namesmt/roo-rocket/commit/2a9ed50))
+- Rocket assembly were not installable to global, update guard hook logic ([bf4f2ba](https://github.com/namesmt/roo-rocket/commit/bf4f2ba))
+- Improve the merge hooks to be more generic and future proof ([382a588](https://github.com/namesmt/roo-rocket/commit/382a588))
+
+### 📖 Documentation
+
+- **README:** Update ([a63961f](https://github.com/namesmt/roo-rocket/commit/a63961f))
+
+### 🏡 Chore
+
+- **libs/roo-rocket:** Release v0.3.11 ([8e511a9](https://github.com/namesmt/roo-rocket/commit/8e511a9))
+- Silent bump to `0.3.11` ([7c0ddf7](https://github.com/namesmt/roo-rocket/commit/7c0ddf7))
+- **libs/roo-rocket:** Release v0.3.12 ([58a8a42](https://github.com/namesmt/roo-rocket/commit/58a8a42))
+- Silent bump to `0.3.12` ([b8e48f9](https://github.com/namesmt/roo-rocket/commit/b8e48f9))
+- **libs/roo-rocket:** Release v0.3.13 ([f49b651](https://github.com/namesmt/roo-rocket/commit/f49b651))
+- Silent bump to `0.3.13` ([1a3a4a8](https://github.com/namesmt/roo-rocket/commit/1a3a4a8))
+- Update `config-rocket`, use `catalogs` for easier peerDeps maintenance, minor cleanup ([f6ff02d](https://github.com/namesmt/roo-rocket/commit/f6ff02d))
+- **libs/roo-rocket:** Release v0.3.14 ([ad88c5b](https://github.com/namesmt/roo-rocket/commit/ad88c5b))
+
+### ❤️ Contributors
+
+- NamesMT ([@NamesMT](https://github.com/NamesMT))
+
 ## v0.3.10
 
 [compare changes](https://github.com/namesmt/roo-rocket/compare/v0.3.9...v0.3.10)
