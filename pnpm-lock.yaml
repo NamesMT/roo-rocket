@@ -44,9 +44,6 @@ importers:
       citty:
         specifier: ^0.1.6
         version: 0.1.6
-      confbox:
-        specifier: ^0.2.2
-        version: 0.2.2
       config-rocket:
         specifier: catalog:peer
         version: 0.4.2(magicast@0.3.5)
@@ -78,6 +75,9 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^3.1.2
         version: 3.1.2(vitest@3.1.2(@types/debug@4.1.12)(@types/node@22.14.0)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.4)(yaml@2.7.1))
+      confbox:
+        specifier: ^0.2.2
+        version: 0.2.2
       unbuild:
         specifier: ^3.5.0
         version: 3.5.0(sass@1.86.3)(typescript@5.8.3)
