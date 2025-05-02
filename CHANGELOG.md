@@ -1,6 +1,20 @@
 # Changelog
 
 
+## v0.3.15
+
+[compare changes](https://github.com/namesmt/roo-rocket/compare/v0.3.14...v0.3.15)
+
+### 🏡 Chore
+
+- Reduce unnecessary fields ([e231080](https://github.com/namesmt/roo-rocket/commit/e231080))
+- Enable CJS for now ([4743f54](https://github.com/namesmt/roo-rocket/commit/4743f54))
+- **libs/roo-rocket:** Release v0.3.15 ([8f23ca5](https://github.com/namesmt/roo-rocket/commit/8f23ca5))
+
+### ❤️ Contributors
+
+- NamesMT ([@NamesMT](https://github.com/NamesMT))
+
 ## v0.3.14
 
 [compare changes](https://github.com/namesmt/roo-rocket/compare/v0.3.10...v0.3.14)
