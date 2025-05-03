@@ -5,7 +5,7 @@ packages:
 
 catalogs:
   peer:
-    config-rocket: ^0.4.2
+    config-rocket: ^0.5.3
 
 onlyBuiltDependencies:
   - '@parcel/watcher'
