@@ -1,6 +1,26 @@
 # Changelog
 
 
+## v0.4.0
+
+[compare changes](https://github.com/namesmt/roo-rocket/compare/v0.3.15...v0.4.0)
+
+### 🏡 Chore
+
+- Bundle `confbox` for now (CJS) ([6ae6121](https://github.com/namesmt/roo-rocket/commit/6ae6121))
+- **libs/roo-rocket:** Release v0.3.16 ([029364e](https://github.com/namesmt/roo-rocket/commit/029364e))
+- Lockfile ([32e25a6](https://github.com/namesmt/roo-rocket/commit/32e25a6))
+- ⚠️  Update deps ([a9d87fc](https://github.com/namesmt/roo-rocket/commit/a9d87fc))
+- **libs/roo-rocket:** Release v0.4.0 ([758cf1d](https://github.com/namesmt/roo-rocket/commit/758cf1d))
+
+#### ⚠️ Breaking Changes
+
+- ⚠️  Update deps ([a9d87fc](https://github.com/namesmt/roo-rocket/commit/a9d87fc))
+
+### ❤️ Contributors
+
+- NamesMT ([@NamesMT](https://github.com/NamesMT))
+
 ## v0.3.15
 
 [compare changes](https://github.com/namesmt/roo-rocket/compare/v0.3.14...v0.3.15)
