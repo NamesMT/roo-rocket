@@ -24,10 +24,10 @@ export function createHookable(): NonNullable<UnpackOptions['hookable']> {
     }
   })
 
-  // Hook to allow .roomodes to be merged (cause it's .json)
+  // Hook to allow .roomodes to be merged (it's yaml under the hood)
   instance.hook('onFileOutput', async (state) => {
     if (state.filePath.endsWith('.roomodes')) {
-      state.mergeType = 'json'
+      state.mergeType = 'yaml'
       state.isValidFileToMerge = true
     }
   })

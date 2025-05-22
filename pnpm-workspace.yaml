@@ -2,12 +2,11 @@ packages:
   - apps/*
   - libs/*
   - locals/*
-
 catalogs:
   peer:
-    config-rocket: ^0.5.3
-
+    config-rocket: ^0.6.1
 onlyBuiltDependencies:
   - '@parcel/watcher'
   - esbuild
   - simple-git-hooks
+  - unrs-resolver
