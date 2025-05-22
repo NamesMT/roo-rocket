@@ -1,7 +1,7 @@
 import type { MarketplaceContext } from '~/rr/marketplace'
 import { Buffer } from 'node:buffer'
 import { Hookable } from 'hookable'
-import { describe, expect, it } from 'vitest'
+import { describe, expect, it, vi } from 'vitest'
 import { registerMarketplaceHooks } from '~/rr/marketplace'
 
 describe('registerMarketplaceHooks', () => {
@@ -11,8 +11,8 @@ describe('registerMarketplaceHooks', () => {
     expect(() => registerMarketplaceHooks(hookable, context)).not.toThrow()
   })
 
-  describe('onExtract hook', () => {
-    it('should allow only specific files for global target', async () => {
+  describe('onFrameFile hook', () => {
+    it('should allow only specific files for global target and skip others', async () => {
       const hookable = new Hookable()
       const context: MarketplaceContext = {
         target: 'global',
@@ -20,27 +20,38 @@ describe('registerMarketplaceHooks', () => {
       }
       registerMarketplaceHooks(hookable, context)
 
-      const validPayload = { unzipped: { '.roo/mcp.json': Buffer.from('{}'), '.roomodes': Buffer.from('') } }
-      await expect(hookable.callHook('onExtract', validPayload)).resolves.not.toThrow()
+      const skipFileMock = vi.fn()
 
-      const invalidPayload = { unzipped: { 'some-other-file.txt': Buffer.from('test') } }
-      await expect(hookable.callHook('onExtract', invalidPayload)).rejects.toThrow('Unsupported file for global installation: some-other-file.txt')
+      // Valid files
+      await hookable.callHook('onFrameFile', { filePath: '.roo/mcp.json', skipFile: skipFileMock })
+      expect(skipFileMock).not.toHaveBeenCalled()
 
-      const mixedPayload = { unzipped: { '.roo/mcp.json': Buffer.from('{}'), 'invalid.file': Buffer.from('') } }
-      await expect(hookable.callHook('onExtract', mixedPayload)).rejects.toThrow('Unsupported file for global installation: invalid.file')
+      await hookable.callHook('onFrameFile', { filePath: '.roomodes', skipFile: skipFileMock })
+      expect(skipFileMock).not.toHaveBeenCalled()
+
+      // Invalid file
+      skipFileMock.mockClear() // Clear previous calls if any (though there shouldn't be)
+      await hookable.callHook('onFrameFile', { filePath: 'some-other-file.txt', skipFile: skipFileMock })
+      expect(skipFileMock).toHaveBeenCalledTimes(1)
+
+      // Mixed scenario (one valid, one invalid - though hook is called per file)
+      // Test invalid file again to ensure skipFile is called
+      skipFileMock.mockClear()
+      await hookable.callHook('onFrameFile', { filePath: 'invalid.file', skipFile: skipFileMock })
+      expect(skipFileMock).toHaveBeenCalledTimes(1)
     })
 
-    it('should not restrict files for local target (implicitly, as hook logic is conditional)', async () => {
-      // While the hook is registered, the logic inside only applies to global.
-      // We test this by ensuring no error is thrown when the hook is called,
-      // even though the internal logic wouldn't run for local.
+    it('should not skip files for project target', async () => {
       const hookable = new Hookable()
       const context: MarketplaceContext = { target: 'project' }
       registerMarketplaceHooks(hookable, context)
 
-      const payload = { unzipped: { 'any-file.txt': Buffer.from('test') } }
-      // The hook itself doesn't throw for local, the check is inside
-      await expect(hookable.callHook('onExtract', payload)).resolves.not.toThrow()
+      const skipFileMock = vi.fn()
+      await hookable.callHook('onFrameFile', { filePath: 'any-file.txt', skipFile: skipFileMock })
+      expect(skipFileMock).not.toHaveBeenCalled()
+
+      await hookable.callHook('onFrameFile', { filePath: '.roo/mcp.json', skipFile: skipFileMock })
+      expect(skipFileMock).not.toHaveBeenCalled()
     })
   })
 
