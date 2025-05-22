@@ -1,6 +1,27 @@
 # Changelog
 
 
+## v0.5.0
+
+[compare changes](https://github.com/namesmt/roo-rocket/compare/v0.4.0...v0.5.0)
+
+### 🏡 Chore
+
+- ⚠️  Update `config-rocket` and deps, `yaml` for `.roomodes` ([15fcad7](https://github.com/namesmt/roo-rocket/commit/15fcad7))
+- **libs/roo-rocket:** Release v0.5.0 ([e2ae9ca](https://github.com/namesmt/roo-rocket/commit/e2ae9ca))
+
+### ✅ Tests
+
+- **rr/marketplace:** Update test for newer `onFrameFile` hook ([3531604](https://github.com/namesmt/roo-rocket/commit/3531604))
+
+#### ⚠️ Breaking Changes
+
+- ⚠️  Update `config-rocket` and deps, `yaml` for `.roomodes` ([15fcad7](https://github.com/namesmt/roo-rocket/commit/15fcad7))
+
+### ❤️ Contributors
+
+- NamesMT ([@NamesMT](https://github.com/NamesMT))
+
 ## v0.4.0
 
 [compare changes](https://github.com/namesmt/roo-rocket/compare/v0.3.15...v0.4.0)
