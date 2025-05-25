@@ -1,6 +1,19 @@
 # Changelog
 
 
+## v0.5.1
+
+[compare changes](https://github.com/namesmt/roo-rocket/compare/v0.5.0...v0.5.1)
+
+### 🏡 Chore
+
+- Re-exports `config-rocket` instead of requiring as peerDep (+ a few refactor) ([04ca237](https://github.com/namesmt/roo-rocket/commit/04ca237))
+- **libs/roo-rocket:** Release v0.5.1 ([ff93d46](https://github.com/namesmt/roo-rocket/commit/ff93d46))
+
+### ❤️ Contributors
+
+- NamesMT ([@NamesMT](https://github.com/NamesMT))
+
 ## v0.5.0
 
 [compare changes](https://github.com/namesmt/roo-rocket/compare/v0.4.0...v0.5.0)
