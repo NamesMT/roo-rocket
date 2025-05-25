@@ -33,26 +33,16 @@
     "dist"
   ],
   "scripts": {
-    "start": "tsx",
-    "watch": "tsx watch",
-    "stub": "unbuild --stub",
-    "cli": "pnpm run start src/cli.ts",
+    "cli": "tsx src/cli-entry.ts",
     "lint": "eslint .",
     "test": "vitest",
     "test:types": "tsc --noEmit --skipLibCheck",
     "check": "pnpm lint && pnpm test:types && vitest run --coverage",
+    "stub": "unbuild --stub",
     "build": "unbuild",
     "bumpp": "pnpm dlx bumpp --no-commit --no-tag --no-push",
     "doPublish": "pnpm publish",
     "prepublishOnly": "pnpm run build"
-  },
-  "peerDependencies": {
-    "config-rocket": "catalog:peer"
-  },
-  "peerDependenciesMeta": {
-    "config-rocket": {
-      "optional": false
-    }
   },
   "dependencies": {
     "citty": "^0.1.6",
@@ -67,7 +57,7 @@
     "@local/tsconfig": "workspace:*",
     "@namesmt/utils": "^0.5.13",
     "@vitest/coverage-v8": "^3.1.4",
-    "confbox": "^0.2.2",
+    "config-rocket": "^0.6.2",
     "unbuild": "^3.5.0",
     "vitest": "^3.1.4"
   }

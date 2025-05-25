@@ -5,7 +5,7 @@
 
 import type { UnpackOptions } from 'config-rocket/cli'
 import { readFile } from 'node:fs/promises'
-import defu from 'defu'
+import { defu } from 'defu'
 import { createHooks } from 'hookable'
 import { basename } from 'pathe'
 import { logger } from '~/helpers/logger'

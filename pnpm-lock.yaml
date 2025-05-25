@@ -4,12 +4,6 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
-catalogs:
-  peer:
-    config-rocket:
-      specifier: ^0.6.1
-      version: 0.6.1
-
 importers:
 
   .:
@@ -44,9 +38,6 @@ importers:
       citty:
         specifier: ^0.1.6
         version: 0.1.6
-      config-rocket:
-        specifier: catalog:peer
-        version: 0.6.1
       consola:
         specifier: ^3.4.2
         version: 3.4.2
@@ -75,9 +66,9 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^3.1.4
         version: 3.1.4(vitest@3.1.4(@types/debug@4.1.12)(@types/node@22.14.0)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.4)(yaml@2.8.0))
-      confbox:
-        specifier: ^0.2.2
-        version: 0.2.2
+      config-rocket:
+        specifier: ^0.6.2
+        version: 0.6.2
       unbuild:
         specifier: ^3.5.0
         version: 3.5.0(sass@1.86.3)(typescript@5.8.3)
@@ -1229,8 +1220,8 @@ packages:
   confbox@0.2.2:
     resolution: {integrity: sha512-1NB+BKqhtNipMsov4xI/NnhCKp9XG9NamYp5PVm9klAT0fsrNPjaFICsCFhNhwZJKNh7zB/3q8qXz0E9oaMNtQ==}
 
-  config-rocket@0.6.1:
-    resolution: {integrity: sha512-b6A0ankpEIJ59nRKLs3apgxEnl2hbDgikjkoIWGg86P9n+f9keF4Bp+KPr47WZwJ0wVb34E2UPEgtGx5QjJ0oQ==}
+  config-rocket@0.6.2:
+    resolution: {integrity: sha512-zk0HejeOSf2vuYQ/wK08G7chWcbMRr+xWw/gHpYzuM2rLQNSOoQH+xO/ivX3LUPAWJz6Hz1FgZFhEaflxxWTDA==}
     engines: {node: '>=20.13.1'}
     hasBin: true
 
@@ -3672,7 +3663,7 @@ snapshots:
 
   '@unocss/eslint-plugin@66.0.0(eslint@9.27.0(jiti@2.4.2))(typescript@5.8.3)':
     dependencies:
-      '@typescript-eslint/utils': 8.29.1(eslint@9.27.0(jiti@2.4.2))(typescript@5.8.3)
+      '@typescript-eslint/utils': 8.32.1(eslint@9.27.0(jiti@2.4.2))(typescript@5.8.3)
       '@unocss/config': 66.0.0
       '@unocss/core': 66.0.0
       '@unocss/rule-utils': 66.0.0
@@ -4006,7 +3997,7 @@ snapshots:
 
   confbox@0.2.2: {}
 
-  config-rocket@0.6.1:
+  config-rocket@0.6.2:
     dependencies:
       citty: 0.1.6
       consola: 3.4.2
@@ -5308,7 +5299,7 @@ snapshots:
 
   pnpm-workspace-yaml@0.3.1:
     dependencies:
-      yaml: 2.7.1
+      yaml: 2.8.0
 
   postcss-calc@10.1.1(postcss@8.5.3):
     dependencies:
